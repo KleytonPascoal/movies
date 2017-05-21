@@ -1,5 +1,7 @@
 package com.kleytonpascoal.movies.test.suite;
 
+import com.kleytonpascoal.movies.ContextTest;
+import com.kleytonpascoal.movies.test.db.DatabaseHelperTest;
 import com.kleytonpascoal.movies.test.ui.MovieDetailActivityTest;
 import com.kleytonpascoal.movies.test.ui.MovieEditActivityTest;
 import com.kleytonpascoal.movies.test.ui.MovieSearchingActivityTest;
@@ -17,7 +19,9 @@ import org.junit.runners.Suite;
         MoviesActivityTest.class,
         MovieDetailActivityTest.class,
         MovieEditActivityTest.class,
-        MovieSearchingActivityTest.class
+        MovieSearchingActivityTest.class,
+        ContextTest.class,
+        DatabaseHelperTest.class
 })
 public class UIRegressionTestSuite {
 }

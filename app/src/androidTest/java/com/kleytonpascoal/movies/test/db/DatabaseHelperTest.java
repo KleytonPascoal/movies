@@ -1,4 +1,4 @@
-package com.kleytonpascoal.movies.test;
+package com.kleytonpascoal.movies.test.db;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -48,16 +48,6 @@ public class DatabaseHelperTest {
         final Movie movieDeleted = helper.getMovieDao().queryForId("1");
         assertNull(movieDeleted);
         helper.releaseHelper();
-
-    }
-
-    @Test
-    public void tempPersistMovie() throws SQLException {
-        final Context context = InstrumentationRegistry.getTargetContext();
-        DatabaseHelper helper = DatabaseHelper.getHelper(context);
-        final List<Movie> movies = DummyContentJson.createMovieList(context);
-        helper.getMovieDao().create(movies);
-        assertNotNull(helper.getMovieDao().queryForAll());
 
     }
 }
