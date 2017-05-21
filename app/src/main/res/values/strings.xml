@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Movies</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="search_movie_hint">Search Movie &#8230;</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="movie_title">Title</string>
+    <string name="movie_year">Year</string>
+    <string name="movie_director">Director</string>
+    <string name="movie_plot">Plot</string>
+    <string name="movie_gender">Gender</string>
+    <string name="movie_runtime">Duration</string>
+    <string name="movie_rating">Rating</string>
+    <string name="movie_awards">Awards</string>
+    <string name="movie_votes">Votes</string>
+    <string name="movie_actors">Actors</string>
+    <string name="movie_writer">Writer</string>
+    <string name="movie_production">Production</string>
+    <string name="movie_box_office">Spend</string>
+    <string name="title_activity_searching">SearchingActivity</string>
+    <string name="search_movie_web_hint">Search movie web&#8230;</string>
+    <string name="msg_error_movie_desnt_load">Sorry, movie doesn\'t not load :(</string>
+    <string name="movie_list_empty_search_msg">Sorry, no movies found</string>
+    <string name="search_movie_get_full_info">Getting movie info</string>
+    <string name="title_activity_test_navigation_bottom">TestNavigationBottomActivity</string>
+    <string name="movies_carousel_view_action">Carousel</string>
+    <string name="movies_grid_view_action">Grid</string>
+    <string name="movies_list_view_action">List</string>
+    <string name="movie_saved_successfully_with_title">%1$s saved ;)</string>
+    <string name="deleted_movie_with_title">%1$s deleted</string>
+    <string name="search_movie_on_web_hint">Search movie on web&#8230;</string>
+    <string name="problem_message">Houston we have a problem!</string>
+    <string name="no_network_connection">No Internet Connection</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="action_edit">Edit</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_save">Save</string>
+    <string name="undo_action">Undo</string>
+
+</resources>

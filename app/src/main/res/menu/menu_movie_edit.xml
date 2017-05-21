@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="pascoal.kleyton.zup.cinemadiary.MovieEditActivity">
+
+    <group android:id="@+id/group_edit_actions">
+
+        <item
+            android:id="@+id/menu_movie_edit_save_action"
+            android:title="@string/action_save"
+            android:icon="@drawable/ic_action_save"
+            app:showAsAction="always" />
+
+        <item
+            android:id="@+id/menu_movie_edit_delete_action"
+            android:title="@string/action_delete"
+            android:icon="@drawable/ic_action_delete"
+            app:showAsAction="ifRoom" />
+
+    </group>
+
+</menu>

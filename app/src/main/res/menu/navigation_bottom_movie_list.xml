@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/movies_views_navigation_item_carousel_view"
+        android:icon="@drawable/ic_carousel_view"
+        android:title="@string/movies_carousel_view_action" />
+
+    <item
+        android:id="@+id/movies_views_navigation_item_list_view"
+        android:icon="@drawable/ic_list_view"
+        android:title="@string/movies_list_view_action" />
+
+    <item
+        android:id="@+id/movies_views_navigation_item_grid_view"
+        android:icon="@drawable/ic_grid_view"
+        android:title="@string/movies_grid_view_action" />
+
+</menu>

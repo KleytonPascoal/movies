@@ -1,0 +1,33 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_height">160dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="app_bar_height">200dp</dimen>
+    <dimen name="movie_detail_app_bar_height">300dp</dimen>
+    <dimen name="movie_edit_app_bar_height">300dp</dimen>
+    <dimen name="item_width">200dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+    <dimen name="list_item_margin">16dp</dimen>
+    <dimen name="list_item_text_marginBottom">4dp</dimen>
+
+    <dimen name="movie_carousel_item_width">100dp</dimen>
+    <dimen name="movie_carousel_item_height">160dp</dimen>
+    <dimen name="movie_carousel_item_title_margin">8dp</dimen>
+
+    <dimen name="margin_small">4dp</dimen>
+    <dimen name="margin_normal">8dp</dimen>
+
+    <dimen name="card_height">220dp</dimen>
+
+    <dimen name="toolbar_title_subtitle_view_start_margin_left">16dp</dimen>
+    <dimen name="toolbar_title_subtitle_end_margin_left">40dp</dimen>
+    <dimen name="toolbar_title_subtitle_end_margin_right">14dp</dimen>
+
+    <dimen name="toolbar_title_subtitle_start_margin_bottom">14dp</dimen>
+    <dimen name="margin_large">16dp</dimen>
+
+</resources>

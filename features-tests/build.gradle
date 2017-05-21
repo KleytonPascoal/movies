@@ -1,0 +1,51 @@
+apply plugin: 'com.android.test'
+
+android {
+    compileSdkVersion rootProject.compileSdkVersion
+    buildToolsVersion rootProject.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+        versionCode rootProject.versionCode
+        versionName rootProject.versionName
+        testInstrumentationRunner "com.kleytonpascoal.movies.test.features.runner.CucumberTestRunner"
+    }
+
+    targetProjectPath ':app'
+    targetVariant 'mockDebug'
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+
+    compile 'junit:junit:' + rootProject.junitVersion
+    compile 'com.android.support:support-annotations:' + rootProject.supportAnnotationsVersion;
+    compile ('com.android.support.test:runner:' + rootProject.testRunnerVersion) {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    }
+    compile ('com.android.support.test:rules:' + rootProject.testRulesVersion) {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    }
+    compile('com.android.support.test.espresso:espresso-core:' + rootProject.espressoCoreVersion, {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support.test.espresso:espresso-idling-resource:' + rootProject.espressoIdlingResourceVersion
+    compile ('com.android.support.test.espresso:espresso-contrib:' + rootProject.espressoContribVersion, {
+        exclude group: 'com.android.support', module: 'support-annotations';
+        exclude group: 'com.android.support', module: 'recyclerview-v7'
+        exclude group: 'com.android.support', module: 'support-v4';
+        exclude group: 'com.android.support', module: 'appcompat-v7';
+        exclude group: 'com.android.support', module: 'design'
+    })
+    compile ('com.android.support.test.espresso:espresso-intents:' + rootProject.espressoIntentsVersion, {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support.test.espresso:espresso-web:' + rootProject.espressoWebVersion
+    compile 'com.squareup.spoon:spoon-client:' + rootProject.spoonClientVersion
+    compile 'com.android.support.test.uiautomator:uiautomator-v18:' + rootProject.uiAutomatorVersion
+    compile('info.cukes:cucumber-android:1.2.2@jar') {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    }
+    compile('info.cukes:cucumber-picocontainer:1.2.2')
+}

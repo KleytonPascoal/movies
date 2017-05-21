@@ -1,0 +1,54 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.1'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+    compileSdkVersion = 25
+    buildToolsVersion = '25.0.2'
+    minSdkVersion = 14
+    targetSdkVersion = 25
+    versionCode = 1
+    versionName = "1.0"
+    appcompatv7Version = '25.3.1'
+    designVersion = '25.3.1'
+    cardViewVersion = '25.3.1'
+    constraintLayoutVersion = '1.0.2'
+    gsonVersion = '2.8.0'
+    picassoVersion ='2.5.2'
+    ormliteAndroidVersion = '5.0'
+    volleyVersion = '1.0.0'
+    supportAnnotationsVersion = '25.3.1'
+    supportVectorDrawableVersion = '25.3.1'
+    junitVersion = '4.12'
+    mockitoCoreVersion = '2.7.15'
+    mockitoAndroidVersion = '2.7.15'
+    testRunnerVersion = '0.5'
+    testRulesVersion = '0.5'
+    espressoCoreVersion = '2.2.2'
+    espressoContribVersion = '2.2.2'
+    espressoIdlingResourceVersion = '2.2.2'
+    espressoIntentsVersion = '2.2.2'
+    espressoWebVersion = '2.2.2'
+    spoonClientVersion = '1.7.1'
+    uiAutomatorVersion = '2.1.2'
+}

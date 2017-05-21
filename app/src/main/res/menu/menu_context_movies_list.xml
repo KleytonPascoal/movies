@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activity.MoviesActivity">
+    <item
+        android:id="@+id/menu_context_edit_movie_action"
+        android:title="@string/action_edit"
+        android:icon="@drawable/ic_action_edit"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/menu_context_delete_movie_action"
+        android:title="@string/action_delete"
+        android:icon="@drawable/ic_action_delete"
+        app:showAsAction="always" />
+
+</menu>

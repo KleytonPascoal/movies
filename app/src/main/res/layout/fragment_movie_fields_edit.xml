@@ -1,0 +1,157 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/movie_edit_fragment"
+    android:layout_margin="@dimen/margin_large"
+    android:orientation="vertical"
+    tools:context=".activity.MovieEditActivity"
+    tools:showIn="@layout/activity_movie_edit">
+
+
+    <!-- Movie plot -->
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_normal">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/movie_edit_plot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/movie_plot" />
+    </android.support.design.widget.TextInputLayout>
+
+    <!-- Movie Gender -->
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_normal">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/movie_edit_gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/movie_gender" />
+    </android.support.design.widget.TextInputLayout>
+
+    <!-- Movie runtime -->
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_normal">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/movie_edit_runtime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/movie_runtime" />
+    </android.support.design.widget.TextInputLayout>
+
+    <!-- Movie rating -->
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_normal">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/movie_edit_rating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/movie_rating" />
+    </android.support.design.widget.TextInputLayout>
+
+    <!-- Movie awards -->
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_normal">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/movie_edit_awards"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/movie_awards" />
+    </android.support.design.widget.TextInputLayout>
+
+    <!-- Movie votes -->
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_normal">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/movie_edit_votes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/movie_votes" />
+    </android.support.design.widget.TextInputLayout>
+
+    <!-- Movie actors -->
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_normal">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/movie_edit_actors"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/movie_actors" />
+    </android.support.design.widget.TextInputLayout>
+
+    <!-- Movie writer -->
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_normal">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/movie_edit_writer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/movie_writer" />
+    </android.support.design.widget.TextInputLayout>
+
+    <!-- Movie director -->
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_normal">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/movie_edit_director"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/movie_director" />
+    </android.support.design.widget.TextInputLayout>
+
+    <!-- Movie production -->
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_normal">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/movie_edit_production"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/movie_production" />
+    </android.support.design.widget.TextInputLayout>
+
+    <!-- Movie Box office -->
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_large">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/movie_edit_box_office"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/movie_box_office" />
+    </android.support.design.widget.TextInputLayout>
+
+
+</LinearLayout>

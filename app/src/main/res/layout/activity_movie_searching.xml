@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_movie_searching"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/movie_searching_toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/movie_list_endless_scroll_progress_bar"
+        tools:context=".activity.MovieSearchingActivity">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/movie_searching_toolbar"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:background="?attr/colorPrimary"
+            android:theme="?attr/actionBarTheme"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingEnd="@dimen/margin_normal"
+                android:paddingLeft="@dimen/margin_normal"
+                android:paddingRight="@dimen/margin_normal"
+                android:paddingStart="@dimen/margin_normal">
+
+                <EditText
+                    android:id="@+id/searching_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_toLeftOf="@+id/clear_search_bt"
+                    android:layout_toStartOf="@+id/clear_search_bt"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/search_movie_on_web_hint"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:maxLines="1" />
+
+                <ImageButton
+                    android:id="@+id/clear_search_bt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/searching_bt"
+                    android:layout_toStartOf="@+id/searching_bt"
+                    android:background="@android:color/transparent"
+                    android:onClick="onClickClearSearchTextButton"
+                    android:src="@drawable/ic_action_clear_text"
+                    android:visibility="gone" />
+
+                <ImageButton
+                    android:id="@+id/searching_bt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@android:color/transparent"
+                    android:onClick="onClickSearchButton"
+                    android:src="@drawable/ic_action_search" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/searching_result_list"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/movie_searching_toolbar" />
+
+        <ProgressBar
+            android:id="@+id/movie_list_start_search_progress_bar"
+            style="?android:progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/movie_searching_toolbar" />
+
+        <TextView
+            android:id="@+id/movie_list_empty_search_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/movie_list_empty_search_msg"
+            android:textAppearance="?attr/textAppearanceSearchResultTitle"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/movie_searching_toolbar" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <ProgressBar
+        android:id="@+id/movie_list_endless_scroll_progress_bar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/movie_carousel_item_width"
+    android:layout_height="@dimen/movie_carousel_item_height"
+    android:background="?android:attr/selectableItemBackground">
+
+    <ImageView
+        android:id="@+id/movie_poster_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:transitionName="movie_poster_view_transition"
+        android:src="@drawable/movie_poster_no_picture"
+        android:adjustViewBounds="true"/>
+
+    <TextView
+        android:id="@+id/carousel_movie_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal|bottom"
+        android:maxLines="@integer/carousel_movie_title_max_lines"
+        android:ellipsize="end"
+        android:paddingBottom="@dimen/movie_carousel_item_title_margin"
+        android:textColor="@android:color/white"
+        android:background="@drawable/image_gradient_transparent_vertical"
+        android:textAppearance="?attr/textAppearanceListItem" />
+
+</FrameLayout>

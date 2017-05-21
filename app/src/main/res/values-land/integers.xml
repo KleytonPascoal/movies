@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer name="cover_flow_carousel_visible_views">5</integer>
+
+    <integer name="movies_grid_view_columns">4</integer>
+
+</resources>

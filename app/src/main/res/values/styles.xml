@@ -1,0 +1,69 @@
+<resources>
+
+    <!-- Base application theme.
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        &lt;!&ndash; Customize your theme here. &ndash;&gt;
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />-->
+
+    <!-- Green App Theme -->
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <!-- AppCompat Attributes -->
+        <item name="colorPrimary">@color/material_green_500</item>
+        <item name="colorPrimaryDark">@color/material_green_700</item>
+        <item name="colorAccent">@color/material_green_A700</item>
+
+        <!--  It should be true otherwise action mode will not overlay toolbar -->
+        <item name="windowActionModeOverlay">true</item>
+
+        <!--  For Custom Action Mode Background Color/Drawable -->
+        <item name="actionModeBackground">@color/material_green_800</item>
+
+        <!-- AppCompat Control Attributes -->
+        <!-- Other control states (not in this example)
+        <item name="colorButtonNormal">@color/material_green_500</item>
+        <item name="colorControlNormal">@color/material_green_500</item>
+        <item name="colorControlActivated">@color/material_green_500</item>
+        <item name="colorControlHighlight">@color/selector_green_pressed</item>
+        -->
+
+        <!-- AppCompat Dialog Attributes -->
+        <item name="dialogTheme">@style/AppTheme.Dialog.Green</item>
+        <item name="alertDialogTheme">@style/AppTheme.Dialog.Alert.Green</item>
+    </style>
+
+    <!-- Green Dialog Theme -->
+    <style name="AppTheme.Dialog.Green" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorPrimary">@color/material_green_500</item>
+        <item name="colorPrimaryDark">@color/material_green_700</item>
+        <item name="colorAccent">@color/material_green_A700</item>
+    </style>
+
+    <!-- Green Alert Dialog Theme -->
+    <style name="AppTheme.Dialog.Alert.Green" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorPrimary">@color/material_green_500</item>
+        <item name="colorPrimaryDark">@color/material_green_700</item>
+        <item name="colorAccent">@color/material_green_A700</item>
+    </style>
+
+</resources>
