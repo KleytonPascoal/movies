@@ -20,9 +20,9 @@ Java 8 e Android SDK setados no path da máquina.
 
 A aplicação possui dos grupos de testes:
 
-1) Módulo app: testes a serem aplicados afim de validar o comportamento de cada tela do app, analisando views, campos, intents lançados etc. Os testes podem ser encontrados na pasta androidTests.
+1) Módulo app: testes a serem aplicados afim de validar o comportamento de cada tela do app, analisando views, campos, intents lançados etc. Os testes podem ser encontrados na pasta androidTests. Seguindos algumas das práticas de [TDD](https://en.wikipedia.org/wiki/Test-driven_development)
 
-2) Módule features-tests: tests baseados em features do sistema. Seguindo práticas de [BDD](https://en.wikipedia.org/wiki/Behavior-driven_development).
+2) Módule features-tests: testes baseados em features do sistema. Seguindo as práticas de [BDD](https://en.wikipedia.org/wiki/Behavior-driven_development).
 
 
 Exemplo da feature testada:
@@ -55,7 +55,7 @@ A realização dos testes deve ser realizada em um dispositivo Android ou Emulad
 
 Execução dos testes de regressão das UI:
 
-1) Vá até a pasta raíz do projeto:
+1) Vá até a pasta raíz do projeto.
 
 
 2) Build o app com o comando abaixo:
