@@ -10,6 +10,15 @@ Use esta branch 'themoviedb', pois ela faz uso do web service 'The Movie DB', e 
 
 Java 8 e Android SDK setados no path da máquina.
 
+### Features:
+
+1) Exibe os filmes salvos como carossel, lista e grid.
+2) Exibe os detalhes do filme, clicando em um item
+3) Exibe o site do filme a partir da tela de detalhes do filme, clicando no endereço do site.
+4) Edita ou deleta um filme das listas de filmes através do menu de contexto (click longo em um item)
+5) Edita ou deleta um filme a partir da tela de detalhes do filme.
+6) Adiciona um novo filme.
+
 
 ### Product flavors:
 
