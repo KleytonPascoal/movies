@@ -4,23 +4,26 @@ Uma aplicação Android cliente para OMDb API - The Open Movie Database
 
 ## Getting Started
 
-Esta aplicação possui dois product flavors
-
-1) mock: deve ser usado para execução dos testes. Ele será usado basicamente para simular as chamadas OMDb API e simulando os dados a serem entregues em cada uma das requisições disparadas. Ele tem irá simular os comportamentos da aplicação na presença de conexões ou não com a internet para os pontos onde se faz necessário o uso da mesma.
-
-2) prod: versão de produção da aplicação com integração à OMDb API.
-
 ### Prerequisites
 
 Java 8 e Android SDK setados no path da máquina.
 
 
-### Testes
+### Product flavors:
+
+1) mock: a ser usado para execução dos testes. Ele simula as chamadas à OMDb API e a presença ou não de conectividade com a internet.
+
+2) prod: versão de produção, possui a integração à OMDb API.
+
+
+### Testes:
 
 A aplicação possui dos grupos de testes:
 
-1) app:androidTest: testes a serem aplicados afim de validar o comportamento de cada tela do app, analisando views, campos, intents lançados etc;
-2) features-tests: module a parte contendo tests baseados em features do sistema. Seguindo práticas de [BDD](https://en.wikipedia.org/wiki/Behavior-driven_development).
+1) Módulo app: testes a serem aplicados afim de validar o comportamento de cada tela do app, analisando views, campos, intents lançados etc. Os testes podem ser encontrados na pasta androidTests.
+
+2) Módule features-tests: tests baseados em features do sistema. Seguindo práticas de [BDD](https://en.wikipedia.org/wiki/Behavior-driven_development).
+
 
 Exemplo da feature testada:
 
@@ -46,60 +49,77 @@ Feature: On My Movies page show saved movies
 
 
 
-### App de para o ambiente de testes
+### App do ambiente de testes
 
-Para realizar os testes execute de regressão das UI:
+A realização dos testes deve ser realizada em um dispositivo Android ou Emulador.
 
-1 - Build o app com o comando abaixo:
+Execução dos testes de regressão das UI:
+
+1) Vá até a pasta raíz do projeto:
+
+
+2) Build o app com o comando abaixo:
 
 ```
 ./gradlew assembleMock
 ```
 
-2 - Agora instale o app:
+3) Agora instale o app:
 
 ```
 ./gradlew installMockDebugAndroidTest
 ```
 
-3- Execute os testes no dispositivo:
+4) Execute os testes no dispositivo:
 
 ```
-adb shell am instrument -w -r   -e debug false -e class com.kleytonpascoal.movies.test.suite.UIRegressionTestSuite com.kleytonpascoal.movies.mock.test/android.support.test.runner.AndroidJUnitRunner
+./gradlew app:connectedMockDebugAndroidTest -Pandroid.testInstrumentationRunnerArgumeMockDebunts.class=com.kleytonpascoal.movies.test.suite.UIRegressionTestSuite
 ```
 
-Após a execução os resultados dos testes poderão serem vistos em:
+5) Após a execução os resultados dos testes poderão ser vistos em:
 
 ```
 /<your-path>/app/build/reports/androidTests/connected/flavors/MOCK/index.html
 ```
 
 
-Agora para testar a feature citada acima, execute
+6) Agora para testar a feature F01 citada acima, execute:
 
 ```
 ./gradlew features-tests:connectedCheck
 ```
 
-Após a execução os resultados dos testes poderão serem vistos em:
+7) Após a execução os resultados dos testes poderão ser vistos em:
 
 ```
 /<your-path>/features-tests/build/reports/androidTests/connected/index.html
 ```
 
+8) Após finalizar todos os testes desinstale o app:
 
-### App de para o ambiente de produção
+```
+./gradlew uninstallAll
+```
 
-Para realizar o build da aplicação do ambiente de produção execute o camando abaixo:
+
+### App do ambiente de produção
+
+1) Para realizar o build da aplicação do ambiente de produção execute o camando abaixo:
 
 ```
 ./gradlew assembleProdDebug
 ```
 
-Agora realiza a instalação:
+2) Agora realiza a instalação:
 
 ```
 ./gradlew installProdDebug
+```
+
+3) Após uso para remover o app execute:
+
+```
+./gradlew uninstallAll
 ```
 
 Enjoy ;)

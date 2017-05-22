@@ -3,6 +3,7 @@ package com.kleytonpascoal.movies.test.util;
 import android.app.ActivityManager;
 import android.content.Context;
 import android.support.test.espresso.IdlingResource;
+import android.util.Log;
 
 import com.kleytonpascoal.movies.service.MoviePersistenceService;
 
@@ -11,6 +12,8 @@ import com.kleytonpascoal.movies.service.MoviePersistenceService;
  */
 
 public class IntentServiceIdlingResource implements IdlingResource {
+
+    private final String TAG = IntentServiceIdlingResource.class.getName();
 
     private final Context context;
     private ResourceCallback resourceCallback;
@@ -41,6 +44,7 @@ public class IntentServiceIdlingResource implements IdlingResource {
     private boolean isIntentServiceRunning() {
         ActivityManager manager = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
         for (ActivityManager.RunningServiceInfo info : manager.getRunningServices(Integer.MAX_VALUE)) {
+            Log.d(TAG, info.service.getClassName());
             if (MoviePersistenceService.class.getName().equals(info.service.getClassName())) {
                 return true;
             }
