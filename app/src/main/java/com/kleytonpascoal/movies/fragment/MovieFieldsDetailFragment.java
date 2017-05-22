@@ -30,13 +30,9 @@ public class MovieFieldsDetailFragment extends Fragment {
     private TextView moviePlot;
     private TextView movieGender;
     private TextView movieRuntime;
-    private TextView movieAwards;
     private TextView movieImdbVotes;
     private TextView movieWebsite;
-    private TextView movieActors;
     private TextView movieRating;
-    private TextView movieWriter;
-    private TextView movieDirector;
     private TextView movieProduction;
     private TextView movieBoxOffice;
 
@@ -91,13 +87,9 @@ public class MovieFieldsDetailFragment extends Fragment {
         moviePlot = (TextView) rootView.findViewById(R.id.movie_detail_plot);
         movieGender = (TextView) rootView.findViewById(R.id.movie_detail_gender);
         movieRuntime = (TextView) rootView.findViewById(R.id.movie_detail_runtime);
-        movieAwards = (TextView) rootView.findViewById(R.id.movie_detail_awards);
         movieImdbVotes = (TextView) rootView.findViewById(R.id.movie_detail_imdb_votes);
         movieWebsite = (TextView) rootView.findViewById(R.id.movie_detail_website);
-        movieActors = (TextView) rootView.findViewById(R.id.movie_detail_actors);
         movieRating = (TextView) rootView.findViewById(R.id.movie_detail_rating);
-        movieWriter = (TextView) rootView.findViewById(R.id.movie_detail_writer);
-        movieDirector = (TextView) rootView.findViewById(R.id.movie_detail_director);
         movieProduction = (TextView) rootView.findViewById(R.id.movie_detail_production);
         movieBoxOffice = (TextView) rootView.findViewById(R.id.movie_detail_box_office);
         movieWebsite.setOnClickListener(new View.OnClickListener() {
@@ -112,18 +104,14 @@ public class MovieFieldsDetailFragment extends Fragment {
     }
 
     private void setValuesToViews() {
-        moviePlot.setText(mMovie.plot);
+        moviePlot.setText(mMovie.overview);
         movieGender.setText(mMovie.genre);
         movieRuntime.setText(mMovie.runtime);
-        movieAwards.setText(mMovie.awards);
-        movieRating.setText(String.valueOf(mMovie.imdbRating));
-        movieImdbVotes.setText(mMovie.imdbVotes);
-        movieWebsite.setText(mMovie.website);
-        movieActors.setText(mMovie.actors);
-        movieWriter.setText(mMovie.writer);
-        movieDirector.setText(mMovie.director);
+        movieRating.setText(String.valueOf(mMovie.voteAverage));
+        movieImdbVotes.setText(mMovie.voteCount);
+        movieWebsite.setText(mMovie.homepage);
         movieProduction.setText(mMovie.production);
-        movieBoxOffice.setText(mMovie.boxOffice);
+        movieBoxOffice.setText(mMovie.budget);
 
         Log.d(TAG, "setValuesToViews");
     }

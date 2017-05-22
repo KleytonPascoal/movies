@@ -74,8 +74,8 @@ public class WebPageActivity extends AppCompatActivity {
     private void loadValuesFromIntent(Bundle arguments) {
         mMovie = arguments.getParcelable(EXTRA_MOVIE);
         setTitle(mMovie.title);
-        mToolbar.setSubtitle(mMovie.website);
-        mWebView.loadUrl(mMovie.website);
+        mToolbar.setSubtitle(mMovie.homepage);
+        mWebView.loadUrl(mMovie.homepage);
     }
 
     private void onCreateWebView() {

@@ -145,21 +145,21 @@ public class MovieEditActivity extends AppCompatActivity
                 appBarLayout.addOnOffsetChangedListener(this);
                 mTitleSubTitleView = (ToolbarTitleSubTitle) findViewById(R.id.toolbar_title_subtitle_view);
                 mFloatTitleSubTitleView = (ToolbarTitleSubTitle) findViewById(R.id.toolbar_title_subtitle_float_view);
-                mTitleSubTitleView.setTitleSubtitle(mMovie.title, mMovie.year);
-                mFloatTitleSubTitleView.setTitleSubtitle(mMovie.title, mMovie.year);
+                mTitleSubTitleView.setTitleSubtitle(mMovie.title, mMovie.releaseDate);
+                mFloatTitleSubTitleView.setTitleSubtitle(mMovie.title, mMovie.releaseDate);
             }
 
         } else {
             Toolbar toolbar = (Toolbar) findViewById(R.id.movie_edit_toolbar);
             setTitle(mMovie.title);
-            toolbar.setSubtitle(mMovie.year);
+            toolbar.setSubtitle(mMovie.releaseDate);
         }
 
         Log.d(TAG, "setToolbarTitleAndSubtitle");
     }
 
     private void onCreateMoviePosterImageView() {
-        LoadImageHelper.loadImageFromUrl(this, mMovie.poster, (ImageView) findViewById(R.id.edit_movie_poster));
+        LoadImageHelper.loadImageFromUrl(this, mMovie.posterPath, (ImageView) findViewById(R.id.edit_movie_poster));
     }
 
 

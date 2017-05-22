@@ -17,11 +17,11 @@ import com.kleytonpascoal.movies.model.Movie;
 
 public class MovieOrmCursorLoader extends CursorLoader {
 
-    private Dao<Movie, String> mMovieDao;
+    private Dao<Movie, Long> mMovieDao;
     private PreparedQuery<Movie> mPrepareQuery;
 
     public MovieOrmCursorLoader(Context context,
-                                Dao<Movie, String> movieDao,
+                                Dao<Movie, Long> movieDao,
                                 PreparedQuery<Movie> preparedQuery) {
         super(context);
         mMovieDao = movieDao;

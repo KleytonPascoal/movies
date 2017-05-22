@@ -41,9 +41,8 @@ public abstract class EndlessScrollListenerRecyclerView extends RecyclerView.OnS
     }
 
 
-    public void setMaxPageIndex(int totalResults, int numItemReturned) {
-        if (currentPageIndex == 1)
-            mMaxPageIndex = (totalResults / numItemReturned) + (totalResults % numItemReturned != 0 ? 1 : 0);
+    public void setMaxPageIndex(int numberOfPages) {
+        mMaxPageIndex = numberOfPages;
     }
 
     /**

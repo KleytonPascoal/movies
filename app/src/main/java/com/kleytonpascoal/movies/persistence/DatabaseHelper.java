@@ -27,7 +27,7 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
     private static final String DATABASE_NAME = TablesNames.Movie.TABLE + ".db";
     private static final int DATABASE_VERSION = 1;
 
-    private Dao<Movie, String> movieDao;
+    private Dao<Movie, Long> movieDao;
 
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -43,7 +43,7 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
 
     public PreparedQuery<Movie> prepareQueryAllMovies() {
         try {
-            QueryBuilder<Movie, String> qb = getMovieDao().queryBuilder();
+            QueryBuilder<Movie, Long> qb = getMovieDao().queryBuilder();
             return qb.prepare();
         } catch (Exception ex) {
             Log.e(TAG, "Could not get query for all Movies", ex);
@@ -53,7 +53,7 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
 
     public PreparedQuery<Movie> prepareQueryMoviesTitleStartsWith(String filter) {
         try {
-            QueryBuilder<Movie, String> qb = getMovieDao().queryBuilder();
+            QueryBuilder<Movie, Long> qb = getMovieDao().queryBuilder();
             qb.orderByRaw("title ASC");
             qb.where().like("title", filter + "%");
             return qb.prepare();
@@ -83,7 +83,7 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
         }
     }
 
-    public Dao<Movie, String> getMovieDao() {
+    public Dao<Movie, Long> getMovieDao() {
         try {
             if (movieDao == null)
                 movieDao = getDao(Movie.class);

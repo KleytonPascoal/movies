@@ -73,22 +73,6 @@
         app:layout_constraintLeft_toRightOf="@id/movie_detail_runtime" />
 
     <TextView
-        android:id="@+id/movie_detail_awards"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:drawableLeft="@drawable/movie_awards"
-        android:drawableStart="@drawable/movie_awards"
-        android:gravity="center_vertical"
-        android:text="awards"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/movie_detail_runtime"
-        tools:drawableLeft="@drawable/movie_awards" />
-
-    <TextView
         android:id="@+id/movie_detail_imdb_votes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -101,7 +85,7 @@
         android:text="imdb_votes"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/movie_detail_awards"
+        app:layout_constraintTop_toBottomOf="@id/movie_detail_rating"
         tools:drawableLeft="@drawable/ic_movie_imdb_votes" />
 
     <TextView
@@ -121,54 +105,6 @@
         tools:drawableLeft="@drawable/ic_web" />
 
     <TextView
-        android:id="@+id/movie_detail_actors"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:drawableLeft="@drawable/ic_actors"
-        android:drawableStart="@drawable/ic_actors"
-        android:gravity="center_vertical"
-        android:text="actors"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/movie_detail_website"
-        tools:drawableLeft="@drawable/ic_actors" />
-
-    <TextView
-        android:id="@+id/movie_detail_writer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:drawableLeft="@drawable/ic_movie_writer"
-        android:drawableStart="@drawable/ic_movie_writer"
-        android:gravity="center_vertical"
-        android:text="writer"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/movie_detail_actors"
-        tools:drawableLeft="@drawable/ic_movie_writer" />
-
-    <TextView
-        android:id="@+id/movie_detail_director"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:drawableLeft="@drawable/ic_movie_director"
-        android:drawableStart="@drawable/ic_movie_director"
-        android:gravity="center_vertical"
-        android:text="director"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/movie_detail_writer"
-        tools:drawableLeft="@drawable/ic_movie_director" />
-
-    <TextView
         android:id="@+id/movie_detail_production"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -181,7 +117,7 @@
         android:text="production"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/movie_detail_director"
+        app:layout_constraintTop_toBottomOf="@id/movie_detail_website"
         tools:drawableLeft="@drawable/ic_movie_production" />
 
     <TextView

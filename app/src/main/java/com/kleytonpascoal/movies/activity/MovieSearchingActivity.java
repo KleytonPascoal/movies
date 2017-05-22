@@ -41,10 +41,12 @@ import com.google.gson.GsonBuilder;
 import com.kleytonpascoal.movies.R;
 import com.kleytonpascoal.movies.adapter.EndlessScrollListenerRecyclerView;
 import com.kleytonpascoal.movies.adapter.MovieShortInfoListRecyclerViewAdapter;
+import com.kleytonpascoal.movies.helper.UrlBuilder;
 import com.kleytonpascoal.movies.helper.VolleyHelper;
 import com.kleytonpascoal.movies.model.Movie;
 import com.kleytonpascoal.movies.model.MovieShortInfo;
-import com.kleytonpascoal.movies.model.SearchMovieListResult;
+import com.kleytonpascoal.movies.model.SearchMovieResult;
+import com.kleytonpascoal.movies.parser.JsonParserHelper;
 import com.kleytonpascoal.movies.provider.NetworkStatusProvider;
 
 import java.util.List;
@@ -54,8 +56,6 @@ public class MovieSearchingActivity extends AppCompatActivity
         TextWatcher, TextView.OnEditorActionListener {
 
     private final static String TAG = MovieSearchingActivity.class.getSimpleName();
-
-    public static final String BASE_URL = "http://www.omdbapi.com/?apikey=d4403af7&";
 
     private RecyclerView mMoviesResultRecyclerView;
     private LinearLayoutManager mLinearLayoutManager;
@@ -68,7 +68,6 @@ public class MovieSearchingActivity extends AppCompatActivity
     private EditText mSearchEditText;
     private ImageButton mClearSearchTextButton;
 
-    private Gson gson;
     private RequestQueue mQueue;
     private EndlessScrollListenerRecyclerView mEndlessScrollListenerRecyclerView;
     private int mCurrentPageIndex;
@@ -82,7 +81,6 @@ public class MovieSearchingActivity extends AppCompatActivity
         setContentView(R.layout.activity_movie_searching);
 
         onCreateVolleyQueue();
-        onCreateGsonBuilderToParserJson();
         onSetupInitialValues();
         onCreateConnectivityBroadcastReceiver();
 
@@ -177,12 +175,6 @@ public class MovieSearchingActivity extends AppCompatActivity
         mMoviesResultRecyclerView.setLayoutManager(mLinearLayoutManager);
     }
 
-    private void onCreateGsonBuilderToParserJson() {
-        GsonBuilder gsonBuilder = new GsonBuilder().setPrettyPrinting()
-                .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE);
-        gson = gsonBuilder.create();
-    }
-
     private void onCreateConnectivityBroadcastReceiver() {
         mConnectivityStatusBroadcastReceiver = new ConnectivityStatusBroadcastReceiver();
     }
@@ -220,7 +212,7 @@ public class MovieSearchingActivity extends AppCompatActivity
         if (!hasInternetConnection()) {
             return false;
         }
-        final String url = BASE_URL + "i=" + item.imdbID;
+        final String url = UrlBuilder.buildMovieById(item.id);
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
                 new Response.Listener<String>() {
                     @Override
@@ -230,7 +222,7 @@ public class MovieSearchingActivity extends AppCompatActivity
                         decrementIdlingResource();
 
                         if (!TextUtils.isEmpty(response)) {
-                            final Movie movie = gson.fromJson(response, Movie.class);
+                            final Movie movie = JsonParserHelper.deserializeMovie(response);
 
                             mProgressBarGetMovieInfo.cancel();
 
@@ -268,7 +260,7 @@ public class MovieSearchingActivity extends AppCompatActivity
         if (!hasInternetConnection()) {
             return;
         }
-        final String url = BASE_URL + "s=" + title.replace(" ", "+") + "&page=" + mCurrentPageIndex;
+        final String url = UrlBuilder.buildSearch(title, mCurrentPageIndex);
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
                 new Response.Listener<String>() {
                     @Override
@@ -281,11 +273,11 @@ public class MovieSearchingActivity extends AppCompatActivity
 
                         if (!TextUtils.isEmpty(response)) {
 
-                            final SearchMovieListResult result = gson.fromJson(response, SearchMovieListResult.class);
+                            final SearchMovieResult result = JsonParserHelper.deserializeSearchResult(response);
 
-                            if (result.response) {
+                            if (result != null && result.results != null && result.results.size() > 0) { //(result.response) {
                                 setNumberOfPageIndexes(result);
-                                setResponseToRecyclerView(result.movies);
+                                setResponseToRecyclerView(result.results);
                             } else {
                                 showEmptyResultMessage();
                             }
@@ -373,8 +365,8 @@ public class MovieSearchingActivity extends AppCompatActivity
             mMoviesResultRecyclerView.setVisibility(View.VISIBLE);
     }
 
-    private void setNumberOfPageIndexes(SearchMovieListResult result) {
-        mEndlessScrollListenerRecyclerView.setMaxPageIndex(result.totalResults, result.movies.size());
+    private void setNumberOfPageIndexes(SearchMovieResult result) {
+        mEndlessScrollListenerRecyclerView.setMaxPageIndex(result.totalPages);
     }
 
     private void setResponseToRecyclerView(List<MovieShortInfo> movies) {

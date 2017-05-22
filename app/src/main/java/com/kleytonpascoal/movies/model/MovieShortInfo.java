@@ -8,19 +8,13 @@ import com.google.gson.annotations.SerializedName;
 
 public class MovieShortInfo {
 
-    @SerializedName("imdbID")
-    public String imdbID;
+    @SerializedName("id")
+    public long id;
 
-    @SerializedName("Title")
+    @SerializedName("title")
     public String title;
 
-    @SerializedName("Year")
-    public String year;
-
-    @SerializedName("Poster")
-    public String poster;
-
-    @SerializedName("Type")
-    public String type;
+    @SerializedName("release_date")
+    public String releaseDate;
 
 }

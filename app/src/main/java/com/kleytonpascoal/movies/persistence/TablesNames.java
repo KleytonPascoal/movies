@@ -7,30 +7,25 @@ package com.kleytonpascoal.movies.persistence;
 public class TablesNames {
     public interface Movie {
         String TABLE = "movies";
-        String IMDBID = "imdbID";
+        String ID = "id";
         String TITLE = "title";
-        String YEAR = "year";
+        String RELEASE_DATE = "releaseDate";
         String RATED = "rated";
-        String RELEASED = "released";
+        String STATUS = "status";
         String RUNTIME = "runtime";
         String GENRE = "genre";
-        String DIRECTOR = "director";
-        String WRITER = "writer";
-        String ACTORS = "actors";
-        String PLOT = "plot";
+        String OVERVIEW = "overview";
         String LANGUAGE = "language";
         String COUNTRY = "country";
         String AWARDS = "awards";
-        String POSTER = "poster";
+        String POSTER_PATH = "posterPath";
         String METASCORE = "metascore";
-        String IMDBRATING = "imdbRating";
-        String IMDBVOTES = "imdbVotes";
+        String VOTE_AVERAGE = "voteAverage";
+        String IMDBVOTES = "voteCount";
         String TYPE = "type";
         String DVD = "dvd";
-        String BOXOFFICE = "boxOffice";
+        String BUDGET = "budget";
         String PRODUCTION = "production";
-        String WEBSITE = "website";
-        String RESPONSE = "response";
-        String FAVORITE = "favorite";
+        String HOMEPAGE = "homepage";
     }
 }

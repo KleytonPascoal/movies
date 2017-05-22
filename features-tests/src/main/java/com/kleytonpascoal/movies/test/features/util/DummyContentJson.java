@@ -62,17 +62,17 @@ public class DummyContentJson {
         final int i = position % 4;
         movie.imdbID = movies[i].imdbID;
         movie.title = movies[i].title;
-        movie.year = movies[i].year;
-        movie.plot = movies[i].plot;
-        movie.poster = movies[i].poster;
+        movie.releaseDate = movies[i].releaseDate;
+        movie.overview = movies[i].overview;
+        movie.posterPath = movies[i].posterPath;
         movie.genre = movies[i].genre;
         movie.runtime = movies[i].runtime;
-        movie.website = movies[i].website;
+        movie.homepage = movies[i].homepage;
         movie.awards = movies[i].awards;
-        movie.imdbVotes = movies[i].imdbVotes;
+        movie.voteCount = movies[i].voteCount;
         movie.production = movies[i].production;
         movie.actors = movies[i].actors;
-        movie.boxOffice = movies[i].boxOffice;
+        movie.budget = movies[i].budget;
         movie.language = movies[i].language;
         movie.country = movies[i].country;
         movie.dvd = movies[i].dvd;
@@ -80,9 +80,9 @@ public class DummyContentJson {
         movie.director = movies[i].director;
         movie.rated = movies[i].rated;
         //movie.ratings = movies[i].ratings;
-        movie.imdbRating = movies[i].imdbRating;
+        movie.voteAverage = movies[i].voteAverage;
         movie.type = movies[i].type;
-        movie.released = movies[i].released;
+        movie.status = movies[i].status;
         movie.writer = movies[i].writer;
         movie.response = movies[i].response;
 

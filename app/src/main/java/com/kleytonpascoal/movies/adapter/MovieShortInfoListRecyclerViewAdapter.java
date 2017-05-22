@@ -27,18 +27,9 @@ public class MovieShortInfoListRecyclerViewAdapter extends BaseListRecyclerViewA
 
         final MovieShortInfo movie = mValues.get(position);
         if (movie != null) {
-            //final String posterUrl = movie.poster;
-
-            /*if (!TextUtils.isEmpty(posterUrl)) {
-                Picasso.with(mContext).load(posterUrl)
-                        .error(mContext.getResources().getDrawable(R.drawable.ic_no_picture))
-                        .fit()
-                        .into(holder.mPosterImageView);
-            }*/
-
             holder.mItem = movie;
             holder.mTitleView.setText(movie.title);
-            holder.mYearView.setText(movie.year);
+            holder.mYearView.setText(movie.releaseDate);
         }
     }
 

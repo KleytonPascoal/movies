@@ -12,7 +12,7 @@ import com.kleytonpascoal.movies.R;
 
 public class LoadImageHelper {
 
-    public static void loadImageFromUrl(final Context context, final String url, final ImageView imageView) {
-        Glide.with(context).load(url).into(imageView).onLoadFailed(context.getResources().getDrawable(R.drawable.movie_poster_no_picture));
+    public static void loadImageFromUrl(final Context context, final String path, final ImageView imageView) {
+        Glide.with(context).load(UrlBuilder.buildImageUrl(path)).into(imageView).onLoadFailed(context.getResources().getDrawable(R.drawable.movie_poster_no_picture));
     }
 }

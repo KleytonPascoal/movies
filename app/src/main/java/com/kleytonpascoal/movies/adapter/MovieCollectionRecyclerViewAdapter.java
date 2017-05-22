@@ -21,14 +21,14 @@ public class MovieCollectionRecyclerViewAdapter extends BaseCursorRecyclerViewAd
 
         final Movie movie = getItemFromCursorAt(position);
         if (movie != null) {
-            final String posterUrl = movie.poster;
+            final String posterUrl = movie.posterPath;
 
             if (!TextUtils.isEmpty(posterUrl))
                 LoadImageHelper.loadImageFromUrl(mContext, posterUrl, holder.mPosterImageView);
 
             holder.mItem = movie;
             holder.mTitleView.setText(movie.title);
-            holder.mYearView.setText(movie.year);
+            holder.mYearView.setText(movie.releaseDate);
         }
     }
 

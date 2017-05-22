@@ -9,7 +9,7 @@ import com.kleytonpascoal.movies.model.Movie;
 public class MovieContent {
 
     public static Movie createMovie() {
-        final String imdbIDValue = "tt0076759";
+        final long imdbIDValue = 209112;
         final String titleValue = "Star Wars: Episode IV - A New Hope";
         final String yearValue = "1977";
         final String ratedValue = "PG";
@@ -39,31 +39,20 @@ public class MovieContent {
         final boolean favoriteValue = true;
 
         final Movie movie = new Movie();
-        movie.imdbID = imdbIDValue;
+        movie.id = imdbIDValue;
         movie.title = titleValue;
-        movie.year = yearValue;
-        movie.rated = ratedValue;
-        movie.released = releasedValue;
+        movie.releaseDate = yearValue;
+        movie.status = releasedValue;
         movie.runtime = runtimeValue;
         movie.genre = genreValue;
-        movie.director = directorValue;
-        movie.writer = writerValue;
-        movie.actors = actorsValue;
-        movie.plot = plotValue;
+        movie.overview = plotValue;
         movie.language = languageValue;
-        movie.country = countryValue;
-        movie.awards = awardsValue;
-        movie.poster = posterValue;
-        movie.metascore = metascoreValue;
-        movie.imdbRating = imdbRatingValue;
-        movie.imdbVotes = imdbVotes;
-        movie.type = typeValue;
-        movie.dvd = dvdValue;
-        movie.boxOffice = boxOfficeValue;
+        movie.posterPath = posterValue;
+        movie.voteAverage = imdbRatingValue;
+        movie.voteCount = imdbVotes;
+        movie.budget = boxOfficeValue;
         movie.production = productionValue;
-        movie.website = websiteValue;
-        movie.response = responseValue;
-        movie.favorite = favoriteValue;
+        movie.homepage = websiteValue;
 
         return movie;
     }

@@ -1,7 +1,5 @@
 package com.kleytonpascoal.movies.adapter;
 
-import android.content.Context;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.View;
@@ -25,7 +23,7 @@ public class CoverFlowCarouselViewAdapter extends BaseCursorRecyclerViewAdapter<
 
         final Movie movie = getItemFromCursorAt(position);
         if (movie != null) {
-            final String posterUrl = movie.poster;
+            final String posterUrl = movie.posterPath;
 
             if (!TextUtils.isEmpty(posterUrl))
                 LoadImageHelper.loadImageFromUrl(mContext, posterUrl, holder.mPosterImageView);

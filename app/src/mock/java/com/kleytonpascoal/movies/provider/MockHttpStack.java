@@ -27,8 +27,6 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
-import static com.kleytonpascoal.movies.activity.MovieSearchingActivity.BASE_URL;
-
 /**
  * Created by kleyton on 12/05/17.
  */
@@ -39,16 +37,16 @@ class MockHttpStack implements HttpStack {
 
     private static final long SIMULATE_NETWORK_DELAY_MS = 600;
 
-    final String URL_FIND_MOVIES_BY_TITLE = BASE_URL + "s=";
-    final String URL_FIND_MOVIE_BY_ID = BASE_URL + "i=";
+    final String URL_FIND_MOVIES_BY_TITLE = "https://api.themoviedb.org/3/search/movie";
+    final String URL_FIND_MOVIE_BY_ID = "https://api.themoviedb.org/3/movie/";
 
-    final static int[] SEARCH_RESULTS = new int[] {
+    /*final static int[] SEARCH_RESULTS = new int[] {
             R.raw.search_reponse_s_gameofthrones_page_1,
             R.raw.search_reponse_s_gameofthrones_page_2,
             R.raw.search_reponse_s_gameofthrones_page_3,
             R.raw.search_reponse_s_gameofthrones_page_4,
             R.raw.search_reponse_s_gameofthrones_page_5
-    };
+    };*/
 
     private final Context mContext;
 

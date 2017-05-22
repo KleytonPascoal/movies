@@ -27,25 +27,25 @@ public class DatabaseHelperTest {
 
         DatabaseHelper helper = DatabaseHelper.getHelper(appContext);
         final Movie movie = new Movie();
-        movie.imdbID = "1";
+        movie.id = 1;
         movie.title = "Movie 1";
         assertEquals(1, helper.getMovieDao().create(movie));
         helper.releaseHelper();
 
 
         helper = DatabaseHelper.getHelper(appContext);
-        final Movie movieSaved = helper.getMovieDao().queryForId("1");
+        final Movie movieSaved = helper.getMovieDao().queryForId(1L);
         assertNotNull(movieSaved);
         helper.releaseHelper();
 
 
         helper = DatabaseHelper.getHelper(appContext);
-        assertEquals(1, helper.getMovieDao().deleteById("1"));
+        assertEquals(1, helper.getMovieDao().deleteById(1L));
         helper.releaseHelper();
 
 
         helper = DatabaseHelper.getHelper(appContext);
-        final Movie movieDeleted = helper.getMovieDao().queryForId("1");
+        final Movie movieDeleted = helper.getMovieDao().queryForId(1L);
         assertNull(movieDeleted);
         helper.releaseHelper();
 

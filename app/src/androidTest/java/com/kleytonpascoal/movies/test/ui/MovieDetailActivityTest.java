@@ -138,13 +138,13 @@ public class MovieDetailActivityTest {
 
         if (orientation == Configuration.ORIENTATION_PORTRAIT) {
             onView(allOf(withId(R.id.toolbar_title_subtitle_view_title), withEffectiveVisibility(VISIBLE))).check(matches(withText(mMovie.title)));
-            onView(allOf(withId(R.id.toolbar_title_subtitle_view_subtitle), withEffectiveVisibility(VISIBLE))).check(matches(withText(mMovie.year)));
+            onView(allOf(withId(R.id.toolbar_title_subtitle_view_subtitle), withEffectiveVisibility(VISIBLE))).check(matches(withText(mMovie.releaseDate)));
 
             onView(allOf(withId(R.id.toolbar_title_subtitle_view_title), withEffectiveVisibility(GONE))).check(matches(withText(mMovie.title)));
-            onView(allOf(withId(R.id.toolbar_title_subtitle_view_subtitle), withEffectiveVisibility(GONE))).check(matches(withText(mMovie.year)));
+            onView(allOf(withId(R.id.toolbar_title_subtitle_view_subtitle), withEffectiveVisibility(GONE))).check(matches(withText(mMovie.releaseDate)));
         } else {
             onView(allOf(instanceOf(TextView.class), withParent(withId(R.id.movie_detail_toolbar)))).check(matches(withText(mMovie.title)));
-            onView(allOf(instanceOf(TextView.class), withParent(withId(R.id.movie_detail_toolbar)))).check(matches(withText(mMovie.year)));
+            onView(allOf(instanceOf(TextView.class), withParent(withId(R.id.movie_detail_toolbar)))).check(matches(withText(mMovie.releaseDate)));
         }
     }
 
@@ -184,30 +184,22 @@ public class MovieDetailActivityTest {
         onView(withId(R.id.movie_detail_gender)).perform(scrollNestedScrollView(true)).check(matches(isDisplayed()));
         onView(withId(R.id.movie_detail_runtime)).perform(scrollNestedScrollView(true)).check(matches(isDisplayed()));
         onView(withId(R.id.movie_detail_rating)).perform(scrollNestedScrollView(true)).check(matches(isDisplayed()));
-        onView(withId(R.id.movie_detail_awards)).perform(scrollNestedScrollView(true)).check(matches(isDisplayed()));
         onView(withId(R.id.movie_detail_imdb_votes)).perform(scrollNestedScrollView(true)).check(matches(isDisplayed()));
         onView(withId(R.id.movie_detail_website)).perform(scrollNestedScrollView(true)).check(matches(isDisplayed()));
-        onView(withId(R.id.movie_detail_actors)).perform(scrollNestedScrollView(true)).check(matches(isDisplayed()));
-        onView(withId(R.id.movie_detail_writer)).perform(scrollNestedScrollView(true)).check(matches(isDisplayed()));
-        onView(withId(R.id.movie_detail_director)).perform(scrollNestedScrollView(true)).check(matches(isDisplayed()));
         onView(withId(R.id.movie_detail_production)).perform(scrollNestedScrollView(true)).check(matches(isDisplayed()));
         onView(withId(R.id.movie_detail_box_office)).perform(scrollNestedScrollView(true)).check(matches(isDisplayed()));
     }
 
     private void check_all_fields_to_edit_are_filled() {
 
-        onView(withId(R.id.movie_detail_plot)).check(matches(withText(mMovie.plot)));
+        onView(withId(R.id.movie_detail_plot)).check(matches(withText(mMovie.overview)));
         onView(withId(R.id.movie_detail_gender)).check(matches(withText(mMovie.genre)));
         onView(withId(R.id.movie_detail_runtime)).check(matches(withText(mMovie.runtime)));
-        onView(withId(R.id.movie_detail_rating)).check(matches(withText(mMovie.imdbRating)));
-        onView(withId(R.id.movie_detail_awards)).check(matches(withText(mMovie.awards)));
-        onView(withId(R.id.movie_detail_imdb_votes)).check(matches(withText(mMovie.imdbVotes)));
-        onView(withId(R.id.movie_detail_website)).check(matches(withText(mMovie.website)));
-        onView(withId(R.id.movie_detail_actors)).check(matches(withText(mMovie.actors)));
-        onView(withId(R.id.movie_detail_writer)).check(matches(withText(mMovie.writer)));
-        onView(withId(R.id.movie_detail_director)).check(matches(withText(mMovie.director)));
+        onView(withId(R.id.movie_detail_rating)).check(matches(withText(mMovie.voteAverage)));
+        onView(withId(R.id.movie_detail_imdb_votes)).check(matches(withText(mMovie.voteCount)));
+        onView(withId(R.id.movie_detail_website)).check(matches(withText(mMovie.homepage)));
         onView(withId(R.id.movie_detail_production)).check(matches(withText(mMovie.production)));
-        onView(withId(R.id.movie_detail_box_office)).check(matches(withText(mMovie.boxOffice)));
+        onView(withId(R.id.movie_detail_box_office)).check(matches(withText(mMovie.budget)));
     }
 
 

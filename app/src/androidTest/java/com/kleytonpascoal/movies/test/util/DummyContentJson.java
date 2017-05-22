@@ -17,6 +17,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import static com.kleytonpascoal.movies.test.util.StreamUtil.getStringFromStream;
+
 /**
  * Helper class for providing sample content for user interfaces created by
  * Android template wizards.
@@ -27,7 +29,7 @@ public class DummyContentJson {
 
     static final List<Movie> ITEMS = new ArrayList<>();
 
-    static final Map<String, Movie> ITEM_MAP = new HashMap<>();
+    static final Map<Long, Movie> ITEM_MAP = new HashMap<>();
 
     private static Movie[] movies = new Movie[4];
 
@@ -54,37 +56,26 @@ public class DummyContentJson {
 
     private static void addItem(Movie item) {
         ITEMS.add(item);
-        ITEM_MAP.put(item.imdbID, item);
+        ITEM_MAP.put(item.id, item);
     }
 
     private static Movie createDummyItem(int position) {
         final Movie movie = new Movie();
         final int i = position % 4;
-        movie.imdbID = movies[i].imdbID;
+        movie.id = movies[i].id;
         movie.title = movies[i].title;
-        movie.year = movies[i].year;
-        movie.plot = movies[i].plot;
-        movie.poster = movies[i].poster;
+        movie.releaseDate = movies[i].releaseDate;
+        movie.overview = movies[i].overview;
+        movie.posterPath = movies[i].posterPath;
         movie.genre = movies[i].genre;
         movie.runtime = movies[i].runtime;
-        movie.website = movies[i].website;
-        movie.awards = movies[i].awards;
-        movie.imdbVotes = movies[i].imdbVotes;
+        movie.homepage = movies[i].homepage;
+        movie.voteCount = movies[i].voteCount;
         movie.production = movies[i].production;
-        movie.actors = movies[i].actors;
-        movie.boxOffice = movies[i].boxOffice;
+        movie.budget = movies[i].budget;
         movie.language = movies[i].language;
-        movie.country = movies[i].country;
-        movie.dvd = movies[i].dvd;
-        movie.metascore = movies[i].metascore;
-        movie.director = movies[i].director;
-        movie.rated = movies[i].rated;
-        //movie.ratings = movies[i].ratings;
-        movie.imdbRating = movies[i].imdbRating;
-        movie.type = movies[i].type;
-        movie.released = movies[i].released;
-        movie.writer = movies[i].writer;
-        movie.response = movies[i].response;
+        movie.voteAverage = movies[i].voteAverage;
+        movie.status = movies[i].status;
 
         return movie;
     }
@@ -95,14 +86,4 @@ public class DummyContentJson {
         return gsonBuilder.create();
     }
 
-    private static String getStringFromStream(InputStream inputStream) throws IOException {
-        final BufferedInputStream bufferInputStream = new BufferedInputStream(inputStream);
-        final ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-        int result = bufferInputStream.read();
-        while (result != -1) {
-            outputStream.write((byte) result);
-            result = bufferInputStream.read();
-        }
-        return outputStream.toString("UTF-8");
-    }
 }

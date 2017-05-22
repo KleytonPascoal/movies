@@ -20,8 +20,6 @@ import com.kleytonpascoal.movies.test.util.ActivityFinisher;
 import com.kleytonpascoal.movies.test.util.IntentServiceIdlingResource;
 import com.kleytonpascoal.movies.test.util.MovieContent;
 
-import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.Test;
@@ -134,7 +132,7 @@ public class MovieEditActivityTest {
         click_floating_action_button_to_save_movie();
         check_intent_to_show_movies_activity();
 
-        check_exist_movie_in_database(mMovie.imdbID);
+        check_exist_movie_in_database(mMovie.id);
 
         unregister_espresso_idling_resource();
         delete_movie_if_exists_in_database();
@@ -153,8 +151,8 @@ public class MovieEditActivityTest {
         click_floating_action_button_to_save_movie();
         check_intent_to_show_movies_activity();
 
-        final Movie movieSaved = check_exist_movie_in_database(mMovie.imdbID);
-        assertEquals(newPlot, movieSaved.plot);
+        final Movie movieSaved = check_exist_movie_in_database(mMovie.id);
+        assertEquals(newPlot, movieSaved.overview);
 
         unregister_espresso_idling_resource();
         delete_movie_if_exists_in_database();
@@ -173,8 +171,8 @@ public class MovieEditActivityTest {
         click_menu_save_item_to_save_movie();
         check_intent_to_show_movies_activity();
 
-        final Movie movieSaved = check_exist_movie_in_database(mMovie.imdbID);
-        assertEquals(newPlot, movieSaved.plot);
+        final Movie movieSaved = check_exist_movie_in_database(mMovie.id);
+        assertEquals(newPlot, movieSaved.overview);
 
         unregister_espresso_idling_resource();
         delete_movie_if_exists_in_database();
@@ -192,7 +190,7 @@ public class MovieEditActivityTest {
 
         check_menu_items_save_and_delete_is_displayed();
         click_menu_delete_item_to_delete_movie();
-        check_not_exist_movie_in_database(mMovie.imdbID);
+        check_not_exist_movie_in_database(mMovie.id);
         check_intent_to_show_movies_activity();
 
         unregister_espresso_idling_resource();
@@ -219,7 +217,7 @@ public class MovieEditActivityTest {
     }
 
 
-    /* type new plot */
+    /* type new overview */
 
     @NonNull
     private String type_new_plot_in_movie() {
@@ -279,12 +277,12 @@ public class MovieEditActivityTest {
 
         if (orientation == Configuration.ORIENTATION_PORTRAIT) {
             onView(allOf(withId(R.id.toolbar_title_subtitle_view_title), withEffectiveVisibility(VISIBLE))).check(matches(withText(mMovie.title)));
-            onView(allOf(withId(R.id.toolbar_title_subtitle_view_subtitle), withEffectiveVisibility(VISIBLE))).check(matches(withText(mMovie.year)));
+            onView(allOf(withId(R.id.toolbar_title_subtitle_view_subtitle), withEffectiveVisibility(VISIBLE))).check(matches(withText(mMovie.releaseDate)));
             onView(allOf(withId(R.id.toolbar_title_subtitle_view_title), withEffectiveVisibility(GONE))).check(matches(withText(mMovie.title)));
-            onView(allOf(withId(R.id.toolbar_title_subtitle_view_subtitle), withEffectiveVisibility(GONE))).check(matches(withText(mMovie.year)));
+            onView(allOf(withId(R.id.toolbar_title_subtitle_view_subtitle), withEffectiveVisibility(GONE))).check(matches(withText(mMovie.releaseDate)));
         } else {
             onView(allOf(instanceOf(TextView.class), withParent(withId(R.id.movie_edit_toolbar)))).check(matches(withText(mMovie.title)));
-            onView(allOf(instanceOf(TextView.class), withParent(withId(R.id.movie_edit_toolbar)))).check(matches(withText(mMovie.year)));
+            onView(allOf(instanceOf(TextView.class), withParent(withId(R.id.movie_edit_toolbar)))).check(matches(withText(mMovie.releaseDate)));
         }
     }
 
@@ -323,28 +321,20 @@ public class MovieEditActivityTest {
         onView(withId(R.id.movie_edit_gender)).perform(scrollNestedScrollView(true)).check(matches(isDisplayed()));
         onView(withId(R.id.movie_edit_runtime)).perform(scrollNestedScrollView(true)).check(matches(isDisplayed()));
         onView(withId(R.id.movie_edit_rating)).perform(scrollNestedScrollView(true)).check(matches(isDisplayed()));
-        onView(withId(R.id.movie_edit_awards)).perform(scrollNestedScrollView(true)).check(matches(isDisplayed()));
         onView(withId(R.id.movie_edit_votes)).perform(scrollNestedScrollView(true)).check(matches(isDisplayed()));
-        onView(withId(R.id.movie_edit_actors)).perform(scrollNestedScrollView(true)).check(matches(isDisplayed()));
-        onView(withId(R.id.movie_edit_writer)).perform(scrollNestedScrollView(true)).check(matches(isDisplayed()));
-        onView(withId(R.id.movie_edit_director)).perform(scrollNestedScrollView(true)).check(matches(isDisplayed()));
         onView(withId(R.id.movie_edit_production)).perform(scrollNestedScrollView(true)).check(matches(isDisplayed()));
         onView(withId(R.id.movie_edit_box_office)).perform(scrollNestedScrollView(true)).check(matches(isDisplayed()));
     }
 
     private void check_all_fields_to_edit_are_filled() {
-        onView(withId(R.id.movie_edit_plot)).check(matches(withText(mMovie.plot)));
+        onView(withId(R.id.movie_edit_plot)).check(matches(withText(mMovie.overview)));
         onView(withId(R.id.movie_edit_gender)).check(matches(withText(mMovie.genre)));
         onView(withId(R.id.movie_edit_runtime)).check(matches(withText(mMovie.runtime)));
-        onView(withId(R.id.movie_edit_rating)).check(matches(withText(mMovie.imdbRating)));
-        onView(withId(R.id.movie_edit_awards)).check(matches(withText(mMovie.awards)));
-        onView(withId(R.id.movie_edit_votes)).check(matches(withText(mMovie.imdbVotes)));
-        onView(withId(R.id.movie_edit_actors)).check(matches(withText(mMovie.actors)));
-        onView(withId(R.id.movie_edit_writer)).check(matches(withText(mMovie.writer)));
-        onView(withId(R.id.movie_edit_director)).check(matches(withText(mMovie.director)));
+        onView(withId(R.id.movie_edit_rating)).check(matches(withText(mMovie.voteAverage)));
+        onView(withId(R.id.movie_edit_votes)).check(matches(withText(mMovie.voteCount)));
         onView(withId(R.id.movie_edit_production)).check(matches(withText(mMovie.production)));
-        onView(withId(R.id.movie_edit_box_office)).check(matches(withText(mMovie.boxOffice)));
-        // website not show to edit
+        onView(withId(R.id.movie_edit_box_office)).check(matches(withText(mMovie.budget)));
+        // homepage not show to edit
     }
 
 
@@ -375,22 +365,22 @@ public class MovieEditActivityTest {
         final DatabaseHelper dbHelper = DatabaseHelper.getHelper(InstrumentationRegistry.getTargetContext());
         dbHelper.getWritableDatabase().beginTransaction();
 
-        final Movie movie = dbHelper.getMovieDao().queryForId(mMovie.imdbID);
+        final Movie movie = dbHelper.getMovieDao().queryForId(mMovie.id);
         if (movie != null)
-            dbHelper.getMovieDao().deleteById(mMovie.imdbID);
+            dbHelper.getMovieDao().deleteById(mMovie.id);
 
         dbHelper.getWritableDatabase().setTransactionSuccessful();
         dbHelper.getWritableDatabase().endTransaction();
         dbHelper.releaseHelper();
     }
 
-    private Movie check_exist_movie_in_database(String id) throws SQLException {
+    private Movie check_exist_movie_in_database(long id) throws SQLException {
         final Movie movie = retrieve_movie_from_database(id);
         assertNotNull(movie);
         return movie;
     }
 
-    private void check_not_exist_movie_in_database(String id) throws SQLException {
+    private void check_not_exist_movie_in_database(long id) throws SQLException {
         assertNull(retrieve_movie_from_database(id));
     }
 
@@ -405,7 +395,7 @@ public class MovieEditActivityTest {
         dbHelper.releaseHelper();
     }
 
-    private Movie retrieve_movie_from_database(String id) throws SQLException {
+    private Movie retrieve_movie_from_database(long id) throws SQLException {
         final DatabaseHelper dbHelper = DatabaseHelper.getHelper(InstrumentationRegistry.getTargetContext());
         final Movie movie = dbHelper.getMovieDao().queryForId(id);
         dbHelper.releaseHelper();
