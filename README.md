@@ -4,6 +4,8 @@ Uma aplicação Android cliente para OMDb API - The Open Movie Database
 
 ## Getting Started
 
+Use a branch 'themoviedb', pois está contem a implementação do web service 'The Movie DB', uma vez que o OMDB API passou a ser privado.
+
 ### Prerequisites
 
 Java 8 e Android SDK setados no path da máquina.
