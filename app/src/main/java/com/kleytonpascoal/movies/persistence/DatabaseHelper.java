@@ -51,11 +51,11 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
         return null;
     }
 
-    public PreparedQuery<Movie> prepareQueryMoviesTitleStartsWith(String filter) {
+    public PreparedQuery<Movie> prepareQueryMoviesTitleContains(String filter) {
         try {
             QueryBuilder<Movie, Long> qb = getMovieDao().queryBuilder();
             qb.orderByRaw("title ASC");
-            qb.where().like("title", filter + "%");
+            qb.where().like("title", "%" + filter + "%");
             return qb.prepare();
         } catch (Exception ex) {
             Log.e(TAG, "Could not get query for Movies title starts with: " + filter, ex);

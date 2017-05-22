@@ -18,13 +18,14 @@ import com.kleytonpascoal.movies.model.Movie;
 import com.kleytonpascoal.movies.persistence.DatabaseHelper;
 import com.kleytonpascoal.movies.test.util.ActivityFinisher;
 import com.kleytonpascoal.movies.test.util.IntentServiceIdlingResource;
-import com.kleytonpascoal.movies.test.util.MovieContent;
+import com.kleytonpascoal.movies.test.util.MovieContentJson;
 
 import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import java.io.IOException;
 import java.sql.SQLException;
 
 import static android.support.test.espresso.Espresso.onView;
@@ -33,7 +34,6 @@ import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.action.ViewActions.typeText;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.intent.Intents.intended;
-import static android.support.test.espresso.intent.matcher.IntentMatchers.hasAction;
 import static android.support.test.espresso.intent.matcher.IntentMatchers.hasComponent;
 import static android.support.test.espresso.matcher.ViewMatchers.Visibility.GONE;
 import static android.support.test.espresso.matcher.ViewMatchers.Visibility.VISIBLE;
@@ -66,8 +66,8 @@ public class MovieEditActivityTest {
     private IdlingResource idlingResource;
 
     @BeforeClass
-    public static void create_movie() {
-        mMovie = MovieContent.createMovie();
+    public static void create_movie() throws IOException {
+        mMovie = MovieContentJson.createMovie(InstrumentationRegistry.getTargetContext());
     }
 
 
@@ -263,10 +263,9 @@ public class MovieEditActivityTest {
             onView(allOf(withId(R.id.toolbar_title_subtitle_view_title), withEffectiveVisibility(VISIBLE))).check(matches(isDisplayed()));
             onView(allOf(withId(R.id.toolbar_title_subtitle_view_subtitle), withEffectiveVisibility(VISIBLE))).check(matches(isDisplayed()));
 
-            onView(withId(R.id.movie_edit_plot)).perform(scrollNestedScrollView(true)).check(matches(isDisplayed()));
+            onView(withId(R.id.movie_edit_box_office)).perform(scrollNestedScrollView(true)).check(matches(isDisplayed()));
 
-            onView(allOf(withId(R.id.toolbar_title_subtitle_view_title), withEffectiveVisibility(VISIBLE))).check(matches(anything()));
-            onView(allOf(withId(R.id.toolbar_title_subtitle_view_subtitle), withEffectiveVisibility(VISIBLE))).check(matches(anything()));
+            onView(allOf(withId(R.id.toolbar_title_subtitle_view), withEffectiveVisibility(VISIBLE))).check(matches(anything()));
         } else {
             onView(withId(R.id.movie_edit_toolbar)).check(matches(isDisplayed()));
         }

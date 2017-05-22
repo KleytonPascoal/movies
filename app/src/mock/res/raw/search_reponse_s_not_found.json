@@ -1,1 +1,6 @@
-{"Response":"False","Error":"Movie not found!"}
+{
+  "page": 1,
+  "results": [],
+  "total_results": 0,
+  "total_pages": 1
+}

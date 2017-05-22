@@ -7,11 +7,9 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.kleytonpascoal.movies.R;
 import com.kleytonpascoal.movies.model.Movie;
+import com.kleytonpascoal.movies.parser.JsonParserHelper;
 
-import java.io.BufferedInputStream;
-import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -25,7 +23,7 @@ import static com.kleytonpascoal.movies.test.util.StreamUtil.getStringFromStream
  * <p>
  * TODO: Replace all uses of this class before publishing your app.
  */
-public class DummyContentJson {
+public class MovieContentJson {
 
     static final List<Movie> ITEMS = new ArrayList<>();
 
@@ -39,11 +37,10 @@ public class DummyContentJson {
 
         try {
 
-            final Gson gson = createGson();
-            movies[0] = gson.fromJson(getStringFromStream(context.getResources().openRawResource(R.raw.search_title_age_of_ice)), Movie.class);
-            movies[1] = gson.fromJson(getStringFromStream(context.getResources().openRawResource(R.raw.search_title_casino_royale)), Movie.class);
-            movies[2] = gson.fromJson(getStringFromStream(context.getResources().openRawResource(R.raw.search_title_star_wars)), Movie.class);
-            movies[3] = gson.fromJson(getStringFromStream(context.getResources().openRawResource(R.raw.search_title_titanic)), Movie.class);
+            movies[0] = JsonParserHelper.deserializeMovie(getStringFromStream(context.getResources().openRawResource(R.raw.movie_id209112)));
+            movies[1] = JsonParserHelper.deserializeMovie(getStringFromStream(context.getResources().openRawResource(R.raw.movie_id415)));
+            movies[2] = JsonParserHelper.deserializeMovie(getStringFromStream(context.getResources().openRawResource(R.raw.movie_id142061)));
+            movies[3] = JsonParserHelper.deserializeMovie(getStringFromStream(context.getResources().openRawResource(R.raw.movie_id382322)));
 
             // Add some sample items.
             for (int i = 0; i < COUNT; i++) {
@@ -86,4 +83,7 @@ public class DummyContentJson {
         return gsonBuilder.create();
     }
 
+    public static Movie createMovie(Context context) throws IOException {
+        return JsonParserHelper.deserializeMovie(getStringFromStream(context.getResources().openRawResource(R.raw.movie_id209112)));
+    }
 }

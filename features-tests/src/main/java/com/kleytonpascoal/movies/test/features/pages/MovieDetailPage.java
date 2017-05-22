@@ -29,12 +29,8 @@ public class MovieDetailPage extends BasePage {
         onView(withId(R.id.movie_detail_gender)).perform(scrollNestedScrollView(true)).check(matches(isDisplayed()));
         onView(withId(R.id.movie_detail_runtime)).perform(scrollNestedScrollView(true)).check(matches(isDisplayed()));
         onView(withId(R.id.movie_detail_rating)).perform(scrollNestedScrollView(true)).check(matches(isDisplayed()));
-        onView(withId(R.id.movie_detail_awards)).perform(scrollNestedScrollView(true)).check(matches(isDisplayed()));
         onView(withId(R.id.movie_detail_imdb_votes)).perform(scrollNestedScrollView(true)).check(matches(isDisplayed()));
         onView(withId(R.id.movie_detail_website)).perform(scrollNestedScrollView(true)).check(matches(isDisplayed()));
-        onView(withId(R.id.movie_detail_actors)).perform(scrollNestedScrollView(true)).check(matches(isDisplayed()));
-        onView(withId(R.id.movie_detail_writer)).perform(scrollNestedScrollView(true)).check(matches(isDisplayed()));
-        onView(withId(R.id.movie_detail_director)).perform(scrollNestedScrollView(true)).check(matches(isDisplayed()));
         onView(withId(R.id.movie_detail_production)).perform(scrollNestedScrollView(true)).check(matches(isDisplayed()));
         onView(withId(R.id.movie_detail_box_office)).perform(scrollNestedScrollView(true)).check(matches(isDisplayed()));
     }

@@ -15,7 +15,7 @@ import com.kleytonpascoal.movies.activity.MoviesActivity;
 import com.kleytonpascoal.movies.model.Movie;
 import com.kleytonpascoal.movies.persistence.DatabaseHelper;
 import com.kleytonpascoal.movies.test.util.ActivityFinisher;
-import com.kleytonpascoal.movies.test.util.DummyContentJson;
+import com.kleytonpascoal.movies.test.util.MovieContentJson;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
@@ -42,6 +42,7 @@ import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
 import static com.kleytonpascoal.movies.test.util.ViewActionsUtil.swipeLeftOnTop;
 import static com.kleytonpascoal.movies.test.util.ViewActionsUtil.swipeRightOnTop;
+import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.Matchers.allOf;
 
 /**
@@ -60,7 +61,7 @@ public class MoviesActivityTest {
     public static void insert_movies_in_database() throws SQLException {
         final Context targetContext = InstrumentationRegistry.getTargetContext();
         DatabaseHelper dbHelper = DatabaseHelper.getHelper(targetContext);
-        mMovies = DummyContentJson.createMovieList(targetContext);
+        mMovies = MovieContentJson.createMovieList(targetContext);
         dbHelper.getWritableDatabase().beginTransaction();
         dbHelper.getMovieDao().create(mMovies);
         dbHelper.getWritableDatabase().setTransactionSuccessful();
@@ -158,7 +159,7 @@ public class MoviesActivityTest {
     public void action_filter_movie_by_title_in_my_movies_as_carousel() {
         start_movies_activity();
 
-        final String movieTitle = "Casino Royale";
+        final String movieTitle = "The Dark Knight";
         action_search_movie_by_title_in_my_movies(movieTitle);
         check_has_movie_item_in_my_movies_as(R.id.movies_carousel, movieTitle);
         finish_all_activities();
@@ -168,7 +169,7 @@ public class MoviesActivityTest {
     public void action_filter_movie_by_title_in_my_movies_as_list() {
         start_movies_activity();
         click_bottom_navigation_item_list();
-        final String movieTitle = "Casino Royale";
+        final String movieTitle = "The Dark Knight";
         action_search_movie_by_title_in_my_movies(movieTitle);
         check_has_movie_item_in_my_movies_as(R.id.movies_list, movieTitle);
         finish_all_activities();
@@ -178,7 +179,7 @@ public class MoviesActivityTest {
     public void action_filter_movie_by_title_in_my_movies_as_grid() {
         start_movies_activity();
         click_bottom_navigation_item_grid();
-        final String movieTitle = "Casino Royale";
+        final String movieTitle = "The Dark Knight";
         action_search_movie_by_title_in_my_movies(movieTitle);
         check_has_movie_item_in_my_movies_as(R.id.movies_grid, movieTitle);
         finish_all_activities();
@@ -254,7 +255,7 @@ public class MoviesActivityTest {
     }
 
     private void check_has_movie_item_in_my_movies_as(int resId, String movieTitle) {
-        onView(withId(resId)).check(matches(hasDescendant(withText(movieTitle))));
+        onView(withId(resId)).check(matches(hasDescendant(withText(containsString(movieTitle)))));
     }
 
     private void check_my_movies_showed_as(@IdRes int resId) {

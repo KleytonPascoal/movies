@@ -1,0 +1,68 @@
+{
+  "adult": false,
+  "backdrop_path": "/h4tsxkwe0lRHBK1WHliNASK63IK.jpg",
+  "belongs_to_collection": {
+    "id": 120794,
+    "name": "Batman Collection",
+    "poster_path": "/adQxUvQW8HXNsvMG5aj71pHh9T.jpg",
+    "backdrop_path": "/9SpZvXLZDGGtFqVDByGqSGI64Kw.jpg"
+  },
+  "budget": 125000000,
+  "genres": [
+    {
+      "id": 28,
+      "name": "Action"
+    },
+    {
+      "id": 80,
+      "name": "Crime"
+    },
+    {
+      "id": 14,
+      "name": "Fantasy"
+    }
+  ],
+  "homepage": "",
+  "id": 415,
+  "imdb_id": "tt0118688",
+  "original_language": "en",
+  "original_title": "Batman & Robin",
+  "overview": "Along with crime-fighting partner Robin and new recruit Batgirl, Batman battles the dual threat of frosty genius Mr. Freeze and homicidal horticulturalist Poison Ivy. Freeze plans to put Gotham City on ice, while Ivy tries to drive a wedge between the dynamic duo.",
+  "popularity": 2.463872,
+  "poster_path": "/79AYCcxw3kSKbhGpx1LiqaCAbwo.jpg",
+  "production_companies": [
+    {
+      "name": "PolyGram Filmed Entertainment",
+      "id": 1382
+    },
+    {
+      "name": "Warner Bros.",
+      "id": 6194
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "GB",
+      "name": "United Kingdom"
+    },
+    {
+      "iso_3166_1": "US",
+      "name": "United States of America"
+    }
+  ],
+  "release_date": "1997-06-20",
+  "revenue": 238207122,
+  "runtime": 125,
+  "spoken_languages": [
+    {
+      "iso_639_1": "en",
+      "name": "English"
+    }
+  ],
+  "status": "Released",
+  "tagline": "Strength. Courage. Honor. And loyalty.",
+  "title": "Batman & Robin",
+  "video": false,
+  "vote_average": 4.2,
+  "vote_count": 1162
+}

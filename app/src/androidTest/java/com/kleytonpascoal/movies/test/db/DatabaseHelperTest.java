@@ -6,13 +6,11 @@ import android.support.test.runner.AndroidJUnit4;
 
 import com.kleytonpascoal.movies.model.Movie;
 import com.kleytonpascoal.movies.persistence.DatabaseHelper;
-import com.kleytonpascoal.movies.test.util.DummyContentJson;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import java.sql.SQLException;
-import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;

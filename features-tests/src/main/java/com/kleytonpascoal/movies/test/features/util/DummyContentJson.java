@@ -7,15 +7,14 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.kleytonpascoal.movies.R;
 import com.kleytonpascoal.movies.model.Movie;
+import com.kleytonpascoal.movies.parser.JsonParserHelper;
 
-import java.io.BufferedInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import static com.kleytonpascoal.movies.test.features.util.StreamUtil.getStringFromStream;
 
 /**
  * Helper class for providing sample content for user interfaces created by
@@ -27,7 +26,7 @@ public class DummyContentJson {
 
     static final List<Movie> ITEMS = new ArrayList<>();
 
-    static final Map<String, Movie> ITEM_MAP = new HashMap<>();
+    static final Map<Long, Movie> ITEM_MAP = new HashMap<>();
 
     private static Movie[] movies = new Movie[4];
 
@@ -37,11 +36,10 @@ public class DummyContentJson {
 
         try {
 
-            final Gson gson = createGson();
-            movies[0] = gson.fromJson(getStringFromStream(context.getResources().openRawResource(R.raw.search_title_age_of_ice)), Movie.class);
-            movies[1] = gson.fromJson(getStringFromStream(context.getResources().openRawResource(R.raw.search_title_casino_royale)), Movie.class);
-            movies[2] = gson.fromJson(getStringFromStream(context.getResources().openRawResource(R.raw.search_title_star_wars)), Movie.class);
-            movies[3] = gson.fromJson(getStringFromStream(context.getResources().openRawResource(R.raw.search_title_titanic)), Movie.class);
+            movies[0] = JsonParserHelper.deserializeMovie(getStringFromStream(context.getResources().openRawResource(R.raw.movie_id209112)));
+            movies[1] = JsonParserHelper.deserializeMovie(getStringFromStream(context.getResources().openRawResource(R.raw.movie_id415)));
+            movies[2] = JsonParserHelper.deserializeMovie(getStringFromStream(context.getResources().openRawResource(R.raw.movie_id142061)));
+            movies[3] = JsonParserHelper.deserializeMovie(getStringFromStream(context.getResources().openRawResource(R.raw.movie_id382322)));
 
             // Add some sample items.
             for (int i = 0; i < COUNT; i++) {
@@ -54,13 +52,13 @@ public class DummyContentJson {
 
     private static void addItem(Movie item) {
         ITEMS.add(item);
-        ITEM_MAP.put(item.imdbID, item);
+        ITEM_MAP.put(item.id, item);
     }
 
     private static Movie createDummyItem(int position) {
         final Movie movie = new Movie();
         final int i = position % 4;
-        movie.imdbID = movies[i].imdbID;
+        movie.id = movies[i].id;
         movie.title = movies[i].title;
         movie.releaseDate = movies[i].releaseDate;
         movie.overview = movies[i].overview;
@@ -68,41 +66,14 @@ public class DummyContentJson {
         movie.genre = movies[i].genre;
         movie.runtime = movies[i].runtime;
         movie.homepage = movies[i].homepage;
-        movie.awards = movies[i].awards;
         movie.voteCount = movies[i].voteCount;
         movie.production = movies[i].production;
-        movie.actors = movies[i].actors;
         movie.budget = movies[i].budget;
         movie.language = movies[i].language;
-        movie.country = movies[i].country;
-        movie.dvd = movies[i].dvd;
-        movie.metascore = movies[i].metascore;
-        movie.director = movies[i].director;
-        movie.rated = movies[i].rated;
-        //movie.ratings = movies[i].ratings;
         movie.voteAverage = movies[i].voteAverage;
-        movie.type = movies[i].type;
         movie.status = movies[i].status;
-        movie.writer = movies[i].writer;
-        movie.response = movies[i].response;
 
         return movie;
     }
 
-    private static Gson createGson() {
-        GsonBuilder gsonBuilder = new GsonBuilder().setPrettyPrinting()
-                .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE);
-        return gsonBuilder.create();
-    }
-
-    private static String getStringFromStream(InputStream inputStream) throws IOException {
-        final BufferedInputStream bufferInputStream = new BufferedInputStream(inputStream);
-        final ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-        int result = bufferInputStream.read();
-        while (result != -1) {
-            outputStream.write((byte) result);
-            result = bufferInputStream.read();
-        }
-        return outputStream.toString("UTF-8");
-    }
 }

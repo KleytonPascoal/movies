@@ -27,6 +27,8 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
+import static com.kleytonpascoal.movies.provider.StreamUtil.getStringFromStream;
+
 /**
  * Created by kleyton on 12/05/17.
  */
@@ -37,16 +39,8 @@ class MockHttpStack implements HttpStack {
 
     private static final long SIMULATE_NETWORK_DELAY_MS = 600;
 
-    final String URL_FIND_MOVIES_BY_TITLE = "https://api.themoviedb.org/3/search/movie";
+    final String URL_FIND_MOVIES_BY_TITLE = "https://api.themoviedb.org/3/search/movie?";
     final String URL_FIND_MOVIE_BY_ID = "https://api.themoviedb.org/3/movie/";
-
-    /*final static int[] SEARCH_RESULTS = new int[] {
-            R.raw.search_reponse_s_gameofthrones_page_1,
-            R.raw.search_reponse_s_gameofthrones_page_2,
-            R.raw.search_reponse_s_gameofthrones_page_3,
-            R.raw.search_reponse_s_gameofthrones_page_4,
-            R.raw.search_reponse_s_gameofthrones_page_5
-    };*/
 
     private final Context mContext;
 
@@ -88,18 +82,35 @@ class MockHttpStack implements HttpStack {
     }
 
     private String createResponseMovieById(String requestUrl) {
-        final String movieId = requestUrl.substring(URL_FIND_MOVIE_BY_ID.length(), requestUrl.length());
-        return parser(movieId);
+        final String movieId = requestUrl.substring(URL_FIND_MOVIE_BY_ID.length(), requestUrl.indexOf("?"));
+
+        String movie = "movie_id" + movieId;
+        Log.d(TAG, "createResponseMovieById: " + movie);
+
+        return parser(movie);
     }
 
     private String createResponseMoviesSearchList(String requestUrl) {
 
         final String params = requestUrl.substring(URL_FIND_MOVIES_BY_TITLE.length(), requestUrl.length());
-        final String[] paramsSplited = params.split("&page=");
-        final String titleToSearch = paramsSplited[0];
-        final Integer pageIndex = Integer.valueOf(paramsSplited[1]);
+
+        String titleToSearch = "";
+        Integer pageIndex = 1;
+
+        final String[] strings = params.split("&");
+        for (String s : strings) {
+            if (s.startsWith("query")) {
+                final String[] param = s.split("=");
+                titleToSearch = param[1];
+            } else if (s.startsWith("page")) {
+                final String[] param = s.split("=");
+                pageIndex = Integer.valueOf(param[1]);
+            }
+        }
 
         String resourceName = "search_reponse_s_" + titleToSearch.replace("+", "").toLowerCase() + "_page_" + pageIndex;
+
+        Log.d(TAG, "createResponseMoviesSearchList: " + resourceName);
 
         String response = parser(resourceName);
         if (response == null) {
@@ -145,7 +156,10 @@ class MockHttpStack implements HttpStack {
                 result = bufferedInputStream.read();
             }
             return outputStream.toString("UTF-8");
-        } catch (Exception exc) {}
+        } catch (Exception exc) {
+            exc.printStackTrace();
+            Log.e(TAG, exc.getMessage());
+        }
         return null;
     }
 }

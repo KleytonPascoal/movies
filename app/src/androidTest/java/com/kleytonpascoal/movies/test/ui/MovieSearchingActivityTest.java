@@ -59,7 +59,7 @@ public class MovieSearchingActivityTest {
         check_show_snackbar_with_no_network_connection_message();
         click_on_snackbar_action_to_close_network_connection_message();
 
-        perform_search_movie_by_title("Game of thrones");
+        perform_search_movie_by_title("batman");
         check_show_snackbar_with_no_network_connection_message();
 
         unregister_idling_resource();
@@ -79,7 +79,7 @@ public class MovieSearchingActivityTest {
         simulate_broadcast_network_status_change();
         //check_hide_snackbar_with_no_network_connection_message();
 
-        perform_search_movie_by_title("Game of thrones");
+        perform_search_movie_by_title("batman");
         check_show_result_and_hide_empty_message();
 
         unregister_idling_resource();
@@ -107,7 +107,7 @@ public class MovieSearchingActivityTest {
         start_movie_searching_activity();
         register_idling_resource();
 
-        perform_search_movie_by_title("Game of thrones");
+        perform_search_movie_by_title("batman");
         check_show_result_and_hide_empty_message();
 
         unregister_idling_resource();
@@ -121,17 +121,14 @@ public class MovieSearchingActivityTest {
         start_movie_searching_activity();
         register_idling_resource();
 
-        perform_search_movie_by_title("Game of thrones");
+        perform_search_movie_by_title("batman");
         check_show_result_and_hide_empty_message();
 
-        // scroll to request page 2
-        onView(withId(R.id.searching_result_list)).perform(scrollToPosition(9));
-        // scroll to request page 3
         onView(withId(R.id.searching_result_list)).perform(scrollToPosition(19));
-        // scroll to request page 4
-        onView(withId(R.id.searching_result_list)).perform(scrollToPosition(29));
-        // scroll to request page 5 (this request don't happen)
-        onView(withId(R.id.searching_result_list)).perform(scrollToPosition(37));
+        onView(withId(R.id.searching_result_list)).perform(scrollToPosition(39));
+        onView(withId(R.id.searching_result_list)).perform(scrollToPosition(59));
+        onView(withId(R.id.searching_result_list)).perform(scrollToPosition(79));
+        onView(withId(R.id.searching_result_list)).perform(scrollToPosition(92));
 
         unregister_idling_resource();
         finish_all_activities();
@@ -144,7 +141,7 @@ public class MovieSearchingActivityTest {
         start_movie_searching_activity();
         register_idling_resource();
 
-        perform_search_movie_by_title("Game of thrones");
+        perform_search_movie_by_title("batman");
         check_show_result_and_hide_empty_message();
 
         click_on_first_movie_in_result_list();

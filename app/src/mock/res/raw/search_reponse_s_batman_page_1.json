@@ -1,0 +1,405 @@
+{
+  "page": 1,
+  "results": [
+    {
+      "poster_path": "/kBf3g9crrADGMc2AMAMlLBgSm2h.jpg",
+      "adult": false,
+      "overview": "The Dark Knight of Gotham City begins his war on crime with his first major enemy being the clownishly homicidal Joker, who has seized control of Gotham's underworld.",
+      "release_date": "1989-06-23",
+      "genre_ids": [
+        14,
+        28
+      ],
+      "id": 268,
+      "original_title": "Batman",
+      "original_language": "en",
+      "title": "Batman",
+      "backdrop_path": "/2blmxp2pr4BhwQr74AdCfwgfMOb.jpg",
+      "popularity": 3.426516,
+      "vote_count": 1715,
+      "video": false,
+      "vote_average": 7
+    },
+    {
+      "poster_path": "/udDVJXtAFsQ8DimrXkVFqy4DGEQ.jpg",
+      "adult": false,
+      "overview": "The Dynamic Duo faces four super-villains who plan to hold the world for ransom with the help of a secret invention that instantly dehydrates people.",
+      "release_date": "1966-07-30",
+      "genre_ids": [
+        10751,
+        12,
+        35,
+        878,
+        80
+      ],
+      "id": 2661,
+      "original_title": "Batman",
+      "original_language": "en",
+      "title": "Batman",
+      "backdrop_path": "/5gcdof2PKH1emllBdN1VXU706IP.jpg",
+      "popularity": 2.599632,
+      "vote_count": 165,
+      "video": false,
+      "vote_average": 6
+    },
+    {
+      "poster_path": "/dr6x4GyyegBWtinPBzipY02J2lV.jpg",
+      "adult": false,
+      "overview": "Driven by tragedy, billionaire Bruce Wayne dedicates his life to uncovering and defeating the corruption that plagues his home, Gotham City.  Unable to work within the system, he instead creates a new identity, a symbol of fear for the criminal underworld - The Batman.",
+      "release_date": "2005-06-14",
+      "genre_ids": [
+        28,
+        80,
+        18
+      ],
+      "id": 272,
+      "original_title": "Batman Begins",
+      "original_language": "en",
+      "title": "Batman Begins",
+      "backdrop_path": "/65JWXDCAfwHhJKnDwRnEgVB411X.jpg",
+      "popularity": 8.056784,
+      "vote_count": 6146,
+      "video": false,
+      "vote_average": 7.4
+    },
+    {
+      "poster_path": "/ifzddUhnsTf1h6guBUKBlDwuS1t.jpg",
+      "adult": false,
+      "overview": "Having defeated the Joker, Batman now faces the Penguin - a warped and deformed individual who is intent on being accepted into Gotham society. Crooked businessman Max Schreck is coerced into helping him become Mayor of Gotham and they both attempt to expose Batman in a different light. Selina Kyle, Max's secretary, is thrown from the top of a building and is transformed into Catwoman - a mysterious figure who has the same personality disorder as Batman. Batman must attempt to clear his name, all the time deciding just what must be done with the Catwoman.",
+      "release_date": "1992-06-19",
+      "genre_ids": [
+        28,
+        14
+      ],
+      "id": 364,
+      "original_title": "Batman Returns",
+      "original_language": "en",
+      "title": "Batman Returns",
+      "backdrop_path": "/wNIE5dpkiHU2csDRptMutFjAGiV.jpg",
+      "popularity": 4.290535,
+      "vote_count": 1333,
+      "video": false,
+      "vote_average": 6.6
+    },
+    {
+      "poster_path": "/1pHOqpdCYNmtRVJs6pGKQKttrPm.jpg",
+      "adult": false,
+      "overview": "In the irreverent spirit of fun that made “The Lego Movie” a worldwide phenomenon, the self-described leading man of that ensemble—Lego Batman—stars in his own big-screen adventure. But there are big changes brewing in Gotham, and if he wants to save the city from The Joker’s hostile takeover, Batman may have to drop the lone vigilante thing, try to work with others and maybe, just maybe, learn to lighten up.",
+      "release_date": "2017-02-08",
+      "genre_ids": [
+        14,
+        28,
+        16,
+        35,
+        10751
+      ],
+      "id": 324849,
+      "original_title": "The Lego Batman Movie",
+      "original_language": "en",
+      "title": "The Lego Batman Movie",
+      "backdrop_path": "/gbO4tWvMC0oLbNvHP9Zth3eUeAA.jpg",
+      "popularity": 6.170278,
+      "vote_count": 603,
+      "video": false,
+      "vote_average": 7.2
+    },
+    {
+      "poster_path": "/79AYCcxw3kSKbhGpx1LiqaCAbwo.jpg",
+      "adult": false,
+      "overview": "Along with crime-fighting partner Robin and new recruit Batgirl, Batman battles the dual threat of frosty genius Mr. Freeze and homicidal horticulturalist Poison Ivy. Freeze plans to put Gotham City on ice, while Ivy tries to drive a wedge between the dynamic duo.",
+      "release_date": "1997-06-20",
+      "genre_ids": [
+        28,
+        80,
+        14
+      ],
+      "id": 415,
+      "original_title": "Batman & Robin",
+      "original_language": "en",
+      "title": "Batman & Robin",
+      "backdrop_path": "/h4tsxkwe0lRHBK1WHliNASK63IK.jpg",
+      "popularity": 3.463872,
+      "vote_count": 1149,
+      "video": false,
+      "vote_average": 4.2
+    },
+    {
+      "poster_path": "/cGOPbv9wA5gEejkUN892JrveARt.jpg",
+      "adult": false,
+      "overview": "Fearing the actions of a god-like Super Hero left unchecked, Gotham City’s own formidable, forceful vigilante takes on Metropolis’s most revered, modern-day savior, while the world wrestles with what sort of hero it really needs. And with Batman and Superman at war with one another, a new threat quickly arises, putting mankind in greater danger than it’s ever known before.",
+      "release_date": "2016-03-23",
+      "genre_ids": [
+        28,
+        12,
+        14
+      ],
+      "id": 209112,
+      "original_title": "Batman v Superman: Dawn of Justice",
+      "original_language": "en",
+      "title": "Batman v Superman: Dawn of Justice",
+      "backdrop_path": "/vsjBeMPZtyB7yNsYY56XYxifaQZ.jpg",
+      "popularity": 14.327091,
+      "vote_count": 5661,
+      "video": false,
+      "vote_average": 5.6
+    },
+    {
+      "poster_path": "/eTMrHEhlFPHNxpqGwpGGTdAa0xV.jpg",
+      "adult": false,
+      "overview": "The Dark Knight of Gotham City confronts a dastardly duo: Two-Face and the Riddler. Formerly District Attorney Harvey Dent, Two-Face believes Batman caused the courtroom accident which left him disfigured on one side. And Edward Nygma, computer-genius and former employee of millionaire Bruce Wayne, is out to get the philanthropist; as The Riddler. Former circus acrobat Dick Grayson, his family killed by Two-Face, becomes Wayne's ward and Batman's new partner Robin.",
+      "release_date": "1995-05-31",
+      "genre_ids": [
+        878,
+        14,
+        28,
+        80
+      ],
+      "id": 414,
+      "original_title": "Batman Forever",
+      "original_language": "en",
+      "title": "Batman Forever",
+      "backdrop_path": "/gVTTtYgKIBurNvkGiGC6735b8y.jpg",
+      "popularity": 3.033241,
+      "vote_count": 1240,
+      "video": false,
+      "vote_average": 5.2
+    },
+    {
+      "poster_path": "/zm0ODjtfJfJW0W269LqsQl5OhJ8.jpg",
+      "adult": false,
+      "overview": "As Batman hunts for the escaped Joker, the Clown Prince of Crime attacks the Gordon family to prove a diabolical point mirroring his own fall into madness. Based on the graphic novel by Alan Moore and Brian Bolland.",
+      "release_date": "2016-07-21",
+      "genre_ids": [
+        28,
+        16,
+        80,
+        18
+      ],
+      "id": 382322,
+      "original_title": "Batman: The Killing Joke",
+      "original_language": "en",
+      "title": "Batman: The Killing Joke",
+      "backdrop_path": "/iYrE2zV1DfZ3l7Lh4frHzNwFncq.jpg",
+      "popularity": 5.197944,
+      "vote_count": 358,
+      "video": false,
+      "vote_average": 6
+    },
+    {
+      "poster_path": "/7wnRn8iQ0QInEK1CaZFqw1zPhht.jpg",
+      "adult": false,
+      "overview": "Japanese spymaster Prince Daka operates a covert espionage organization located in Metropolis' now-deserted Little Tokyo which turns American scientists into pliable zombies.",
+      "release_date": "1943-07-16",
+      "genre_ids": [
+        28,
+        12
+      ],
+      "id": 125249,
+      "original_title": "Batman",
+      "original_language": "en",
+      "title": "Batman",
+      "backdrop_path": "/xEG5iP1qZCiDt4BefSpLy1d54zE.jpg",
+      "popularity": 1.073177,
+      "vote_count": 10,
+      "video": false,
+      "vote_average": 6.7
+    },
+    {
+      "poster_path": "/3zJABNuAjAccFdAMQ3D5RJF0v93.jpg",
+      "adult": false,
+      "overview": "Batman makes his first stand-alone appearance in the DC Extended Universe.",
+      "release_date": "2019-12-31",
+      "genre_ids": [
+        28,
+        12,
+        18
+      ],
+      "id": 414906,
+      "original_title": "The Batman",
+      "original_language": "en",
+      "title": "The Batman",
+      "backdrop_path": "/xyWSYXUuLrtnDWjyY6ONh502Bz9.jpg",
+      "popularity": 1.668094,
+      "vote_count": 2,
+      "video": false,
+      "vote_average": 0
+    },
+    {
+      "poster_path": "/j3SFJqZPeeB9g5JMU7UFLgEqj2T.jpg",
+      "adult": false,
+      "overview": "Batman learns that he has a violent, unruly pre-teen son with Talia al Ghul named Damian Wayne who is secretly being raised by Ra's al Ghul and the League of Assassins. When Ra's al Ghul apparently dies after a battle with Deathstroke, Batman must work to stop his long-lost son from taking revenge and guiding him to a righteous path, in addition to the chance for the pair to truly acknowledging each other as family.",
+      "release_date": "2014-04-20",
+      "genre_ids": [
+        16,
+        28,
+        12
+      ],
+      "id": 251519,
+      "original_title": "Son of Batman",
+      "original_language": "en",
+      "title": "Son of Batman",
+      "backdrop_path": "/omK35Mr3oks6bd5efrgsO7CzmLP.jpg",
+      "popularity": 2.305919,
+      "vote_count": 257,
+      "video": false,
+      "vote_average": 6.8
+    },
+    {
+      "poster_path": "/4o6eVQl8SZoJ5H05Cddc2wUk6J.jpg",
+      "adult": false,
+      "overview": "Everyone thinks that Bob Kane created Batman, but that’s not the whole truth. One author makes it his crusade to make it known that Bill Finger, a struggling writer, actually helped invent the iconic superhero, from concept to costume to the very character we all know and love. Bruce Wayne may be Batman’s secret identity, but his creator was always a true mystery.",
+      "release_date": "2017-05-06",
+      "genre_ids": [
+        99
+      ],
+      "id": 456348,
+      "original_title": "Batman & Bill",
+      "original_language": "en",
+      "title": "Batman & Bill",
+      "backdrop_path": null,
+      "popularity": 1.49964,
+      "vote_count": 2,
+      "video": false,
+      "vote_average": 8
+    },
+    {
+      "poster_path": "/wPeorCnD9MRR2S9Dzh4OpIgNLiv.jpg",
+      "adult": false,
+      "overview": "Batman has stopped the reign of terror that The Mutants had cast upon his city.  Now an old foe wants a reunion and the government wants The Man of Steel to put a stop to Batman.",
+      "release_date": "2013-01-18",
+      "genre_ids": [
+        16,
+        28
+      ],
+      "id": 142061,
+      "original_title": "Batman: The Dark Knight Returns, Part 2",
+      "original_language": "en",
+      "title": "Batman: The Dark Knight Returns, Part 2",
+      "backdrop_path": "/wDWPuqhgZ0INvqHsyLa470xeabT.jpg",
+      "popularity": 3.868663,
+      "vote_count": 340,
+      "video": false,
+      "vote_average": 7.8
+    },
+    {
+      "poster_path": "/6g7iQJAgyDn9mep98RXhLI64RcA.jpg",
+      "adult": false,
+      "overview": "Damian Wayne is having a hard time coping with his father's \"no killing\" rule. Meanwhile, Gotham is going through hell with threats such as the insane Dollmaker, and the secretive Court of Owls.",
+      "release_date": "2015-04-14",
+      "genre_ids": [
+        28,
+        12,
+        16
+      ],
+      "id": 321528,
+      "original_title": "Batman vs. Robin",
+      "original_language": "en",
+      "title": "Batman vs. Robin",
+      "backdrop_path": "/oERfMmGc1GJRnC8IuFUH7zpR5z5.jpg",
+      "popularity": 1.586899,
+      "vote_count": 181,
+      "video": false,
+      "vote_average": 6.8
+    },
+    {
+      "poster_path": "/xp65MaH8bycr5v14f8jPO2NEXlX.jpg",
+      "adult": false,
+      "overview": "Bruce Wayne is missing. Alfred covers for him while Nightwing and Robin patrol Gotham City in his stead. And a new player, Batwoman, investigates Batman's disappearance.",
+      "release_date": "2016-03-22",
+      "genre_ids": [
+        28,
+        16,
+        878
+      ],
+      "id": 366924,
+      "original_title": "Batman: Bad Blood",
+      "original_language": "en",
+      "title": "Batman: Bad Blood",
+      "backdrop_path": "/1jpJpe5sx0AzSLOMFfds0s5alSw.jpg",
+      "popularity": 1.99239,
+      "vote_count": 146,
+      "video": false,
+      "vote_average": 6.6
+    },
+    {
+      "poster_path": "/zMY2QVCN9z6YH0eS32NOrSss0gb.jpg",
+      "adult": false,
+      "overview": "Behind the scenes documentary highlighting production design, props &amp; gadgets, batmobile/batsuit design, and the music of the 1989 Batman.",
+      "release_date": "2005-07-04",
+      "genre_ids": [],
+      "id": 204649,
+      "original_title": "Batman: Beyond Batman",
+      "original_language": "en",
+      "title": "Batman: Beyond Batman",
+      "backdrop_path": null,
+      "popularity": 1.00084,
+      "vote_count": 5,
+      "video": false,
+      "vote_average": 7.2
+    },
+    {
+      "poster_path": null,
+      "adult": false,
+      "overview": "After Batman is murdered by the Jokers son Michael, Batmans son Jeffery  decides to finish his fathers job in this fan made fail.",
+      "release_date": "",
+      "genre_ids": [
+        28,
+        18,
+        53
+      ],
+      "id": 451570,
+      "original_title": "Batman Jr.",
+      "original_language": "en",
+      "title": "Batman Jr.",
+      "backdrop_path": null,
+      "popularity": 1.000364,
+      "vote_count": 0,
+      "video": false,
+      "vote_average": 0
+    },
+    {
+      "poster_path": "/bI1YVuhBN6Vws1GP9Mf01DyhC2s.jpg",
+      "adult": false,
+      "overview": "Two men come to Gotham City: Bruce Wayne after years abroad feeding his lifelong obsession for justice and Jim Gordon after being too honest a cop with the wrong people elsewhere. After learning painful lessons about the city's corruption on its streets and police department respectively, this pair learn how to fight back their own way. With that, Gotham's evildoers from top to bottom are terrorized by the mysterious Batman and the equally heroic Gordon is assigned to catch him by comrades who both hate and fear him themselves. In the ensuing manhunt, both find much in common as the seeds of an unexpected friendship are laid with additional friends and rivals helping to start the legend.",
+      "release_date": "2011-09-27",
+      "genre_ids": [
+        28,
+        12,
+        16,
+        80,
+        878
+      ],
+      "id": 69735,
+      "original_title": "Batman: Year One",
+      "original_language": "en",
+      "title": "Batman: Year One",
+      "backdrop_path": "/hAhMOPPPxzCKsCu5rUMYdwS8Yb5.jpg",
+      "popularity": 1.781881,
+      "vote_count": 207,
+      "video": false,
+      "vote_average": 7.1
+    },
+    {
+      "poster_path": "/7eaHkUKAzfstt6XQCiXyuKiZUAw.jpg",
+      "adult": false,
+      "overview": "United States President Lex Luthor uses the oncoming trajectory of a Kryptonite meteor to frame Superman and declare a $1 billion bounty on the heads of the Man of Steel and his ‘partner in crime’, Batman. Heroes and villains alike launch a relentless pursuit of Superman and Batman, who must unite—and recruit help—to try and stave off the action-packed onslaught, stop the meteor Luthors plot.",
+      "release_date": "2009-09-29",
+      "genre_ids": [
+        16,
+        28,
+        12
+      ],
+      "id": 22855,
+      "original_title": "Superman/Batman: Public Enemies",
+      "original_language": "en",
+      "title": "Superman/Batman: Public Enemies",
+      "backdrop_path": "/aMyEMGuW2NV3A0whuEM7VKp6M73.jpg",
+      "popularity": 1.761287,
+      "vote_count": 123,
+      "video": false,
+      "vote_average": 6.6
+    }
+  ],
+  "total_results": 93,
+  "total_pages": 5
+}

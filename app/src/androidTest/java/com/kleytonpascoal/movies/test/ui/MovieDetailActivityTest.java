@@ -2,6 +2,7 @@ package com.kleytonpascoal.movies.test.ui;
 
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.support.test.InstrumentationRegistry;
 import android.support.test.espresso.intent.Intents;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
@@ -12,7 +13,7 @@ import com.kleytonpascoal.movies.activity.MovieDetailActivity;
 import com.kleytonpascoal.movies.activity.MovieEditActivity;
 import com.kleytonpascoal.movies.model.Movie;
 import com.kleytonpascoal.movies.test.util.ActivityFinisher;
-import com.kleytonpascoal.movies.test.util.MovieContent;
+import com.kleytonpascoal.movies.test.util.MovieContentJson;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -20,6 +21,8 @@ import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+
+import java.io.IOException;
 
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
@@ -58,8 +61,8 @@ public class MovieDetailActivityTest {
     }
 
     @BeforeClass
-    public static void create_movie() {
-        mMovie = MovieContent.createMovie();
+    public static void create_movie() throws IOException {
+        mMovie = MovieContentJson.createMovie(InstrumentationRegistry.getTargetContext());
     }
 
     @AfterClass

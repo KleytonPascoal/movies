@@ -274,7 +274,7 @@ public class MoviesActivity extends AppCompatActivity
         if (mCurrentFilter == null) {
             mPreparedQuery = mDbHelper.prepareQueryAllMovies();
         } else {
-            mPreparedQuery = mDbHelper.prepareQueryMoviesTitleStartsWith(mCurrentFilter);
+            mPreparedQuery = mDbHelper.prepareQueryMoviesTitleContains(mCurrentFilter);
         }
         mMovieOrmCursorLoader = new MovieOrmCursorLoader(this, mDbHelper.getMovieDao(), mPreparedQuery);
 

@@ -43,7 +43,7 @@ public class MovieParserTest {
         movieExpected.voteCount = "5685";
 
         Movie movie = JsonParserHelper.deserializeMovie(getStringFromStream(
-                InstrumentationRegistry.getTargetContext().getResources().openRawResource(R.raw.movie_id_209112)));
+                InstrumentationRegistry.getTargetContext().getResources().openRawResource(R.raw.movie_id209112)));
 
         assertEquals(movieExpected, movie);
 

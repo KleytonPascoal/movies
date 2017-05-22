@@ -1,0 +1,68 @@
+{
+  "adult": false,
+  "backdrop_path": "/iYrE2zV1DfZ3l7Lh4frHzNwFncq.jpg",
+  "belongs_to_collection": {
+    "id": 421904,
+    "name": "Batman (DC Universe Animated) Collection",
+    "poster_path": "/ycvSvnNrGe7kTtGcMOZflc3nbA8.jpg",
+    "backdrop_path": "/tXqcWo8zwLT07RCcVv9m6zrTqUF.jpg"
+  },
+  "budget": 3500000,
+  "genres": [
+    {
+      "id": 28,
+      "name": "Action"
+    },
+    {
+      "id": 16,
+      "name": "Animation"
+    },
+    {
+      "id": 80,
+      "name": "Crime"
+    },
+    {
+      "id": 18,
+      "name": "Drama"
+    }
+  ],
+  "homepage": "http://www.dccomics.com/movies",
+  "id": 382322,
+  "imdb_id": "tt4853102",
+  "original_language": "en",
+  "original_title": "Batman: The Killing Joke",
+  "overview": "As Batman hunts for the escaped Joker, the Clown Prince of Crime attacks the Gordon family to prove a diabolical point mirroring his own fall into madness. Based on the graphic novel by Alan Moore and Brian Bolland.",
+  "popularity": 4.197944,
+  "poster_path": "/zm0ODjtfJfJW0W269LqsQl5OhJ8.jpg",
+  "production_companies": [
+    {
+      "name": "DC Comics",
+      "id": 429
+    },
+    {
+      "name": "Warner Bros. Animation",
+      "id": 2785
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "US",
+      "name": "United States of America"
+    }
+  ],
+  "release_date": "2016-07-21",
+  "revenue": 3775000,
+  "runtime": 72,
+  "spoken_languages": [
+    {
+      "iso_639_1": "en",
+      "name": "English"
+    }
+  ],
+  "status": "Released",
+  "tagline": "The madness begins.",
+  "title": "Batman: The Killing Joke",
+  "video": false,
+  "vote_average": 6.1,
+  "vote_count": 368
+}
