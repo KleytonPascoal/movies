@@ -36,20 +36,34 @@ public class MovieJsonDeserializer implements JsonDeserializer<Movie> {
         final JsonElement jsonHomepage = jsonObject.get("homepage");
 
         final Movie movie = new Movie();
-        movie.id = jsonId.getAsLong();
-        movie.title = jsonTitle.getAsString();
-        movie.releaseDate = jsonReleaseDate.getAsString();
-        movie.status = jsonStatus.getAsString();
-        movie.runtime = jsonRuntime.getAsString();
-        movie.genre = parserListToString(jsonGenre, "name");
-        movie.overview = jsonOverview.getAsString();
-        movie.language = jsonOriginalLanguage.getAsString();
-        movie.posterPath = jsonPosterPath.getAsString();
-        movie.voteAverage = jsonVoteAverage.getAsString();
-        movie.voteCount = jsonVoteCount.getAsString();
-        movie.budget = jsonBudget.getAsString();
-        movie.production = parserListToString(jsonProductionCompanies, "name");
-        movie.homepage = jsonHomepage.getAsString();
+        if (jsonId != null && !jsonId.isJsonNull())
+            movie.id = jsonId.getAsLong();
+        if (jsonTitle != null && !jsonTitle.isJsonNull())
+            movie.title = jsonTitle.getAsString();
+        if (jsonReleaseDate != null && !jsonReleaseDate.isJsonNull())
+            movie.releaseDate = jsonReleaseDate.getAsString();
+        if (jsonStatus != null && !jsonStatus.isJsonNull())
+            movie.status = jsonStatus.getAsString();
+        if (jsonRuntime != null && !jsonRuntime.isJsonNull())
+            movie.runtime = jsonRuntime.getAsString();
+        if (jsonGenre != null && !jsonGenre.isJsonNull())
+            movie.genre = parserListToString(jsonGenre, "name");
+        if (jsonOverview != null && !jsonOverview.isJsonNull())
+            movie.overview = jsonOverview.getAsString();
+        if (jsonOriginalLanguage != null && !jsonOriginalLanguage.isJsonNull())
+            movie.language = jsonOriginalLanguage.getAsString();
+        if (jsonPosterPath != null && !jsonPosterPath.isJsonNull())
+            movie.posterPath = jsonPosterPath.getAsString();
+        if (jsonVoteAverage != null && !jsonVoteAverage.isJsonNull())
+            movie.voteAverage = jsonVoteAverage.getAsString();
+        if (jsonVoteCount != null && !jsonVoteCount.isJsonNull())
+            movie.voteCount = jsonVoteCount.getAsString();
+        if (jsonBudget != null && !jsonBudget.isJsonNull())
+            movie.budget = jsonBudget.getAsString();
+        if (jsonProductionCompanies != null && !jsonProductionCompanies.isJsonNull())
+            movie.production = parserListToString(jsonProductionCompanies, "name");
+        if (jsonHomepage != null && !jsonHomepage.isJsonNull())
+            movie.homepage = jsonHomepage.getAsString();
 
         return movie;
     }
