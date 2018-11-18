@@ -8,7 +8,8 @@ Use a branch 'themoviedb', pois ela usa o web service 'The Movie DB', uma vez qu
 
 ### Prerequisites
 
-Java 8 e Android SDK setados no path da máquina.
+1) Java 8 e Android SDK setados no path da máquina.
+2) Desativar todas as animações do dispositivo antes de executar os testes.
 
 ### Features:
 
